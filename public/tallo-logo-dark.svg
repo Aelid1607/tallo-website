@@ -1,0 +1,12 @@
+<svg width="400" height="120" viewBox="0 0 400 120" xmlns="http://www.w3.org/2000/svg">
+  <rect width="400" height="120" fill="#0a0a0a"/>
+  <!-- Compare mark -->
+  <rect x="32" y="36" width="88" height="14" rx="7" fill="#ffffff"/>
+  <rect x="32" y="58" width="52" height="14" rx="7" fill="#0070F3"/>
+  <!-- Separator -->
+  <rect x="144" y="30" width="1.5" height="38" rx="1" fill="#ffffff" opacity="0.25"/>
+  <!-- Wordmark -->
+  <text x="158" y="64" font-family="Candara, Optima, 'Gill Sans', Calibri, sans-serif" font-size="46" font-weight="500" letter-spacing="6" fill="#ffffff">Tallo<tspan fill="#0070F3">.</tspan></text>
+  <!-- Subline -->
+  <text x="159" y="84" font-family="-apple-system, 'Helvetica Neue', Arial, sans-serif" font-size="9" font-weight="500" fill="#0070F3" letter-spacing="4">Smarter shopping</text>
+</svg>
