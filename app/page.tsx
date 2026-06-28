@@ -63,6 +63,7 @@ function PhoneFrame({ src, alt, width = 260 }: { src: string; alt: string; width
           alt={alt}
           width={inner}
           height={Math.round(inner * 2.165)}
+          loading="eager"
           style={{ display: "block", width: "100%", height: "auto" }}
         />
       </div>
