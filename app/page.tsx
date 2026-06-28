@@ -82,6 +82,7 @@ function Hero() {
               width={400}
               height={120}
               className="mb-8 mx-auto block"
+              style={{ maxWidth: "100%", height: "auto" }}
             />
             <div
               className="inline-flex items-center gap-2 mb-8 px-3 py-1.5 rounded-full text-xs font-semibold"
@@ -91,13 +92,10 @@ function Hero() {
               Now live on iOS TestFlight
             </div>
             <h1
-              className="text-5xl font-bold leading-none mb-6"
+              className="text-4xl md:text-5xl font-bold leading-none mb-6"
               style={{ letterSpacing: "-0.04em", color: "var(--black)" }}
             >
-              Know exactly what
-              <br />
-              your groceries cost
-              <br />
+              Know exactly what your groceries cost{" "}
               <span style={{ color: "var(--blue)" }}>before you leave home.</span>
             </h1>
             <p className="text-lg leading-relaxed mb-10" style={{ color: "var(--muted)" }}>
@@ -134,14 +132,12 @@ function Hero() {
             </div>
           </div>
 
-          <div className="flex justify-center lg:justify-end" style={{ marginTop: "-16px" }}>
-            <div style={{ transform: "scale(1.12)", transformOrigin: "top center" }}>
-              <PhoneFrame
-                src="/screenshots/price-comparison.png"
-                alt="Tallo showing price comparison across Coles, Woolworths and Aldi"
-                width={280}
-              />
-            </div>
+          <div className="flex justify-center lg:justify-end">
+            <PhoneFrame
+              src="/screenshots/price-comparison.png"
+              alt="Tallo showing price comparison across Coles, Woolworths and Aldi"
+              width={280}
+            />
           </div>
         </div>
       </div>
@@ -206,7 +202,7 @@ function FeatureSection({
   phoneRight?: boolean;
 }) {
   return (
-    <section className="py-28 px-6" style={{ borderTop: "1px solid var(--border)" }}>
+    <section className="py-16 md:py-28 px-6" style={{ borderTop: "1px solid var(--border)" }}>
       <div className="max-w-6xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
           <div className={`flex justify-center ${phoneRight ? "lg:order-last" : ""}`}>
@@ -265,7 +261,7 @@ const miniFeatures = [
 
 function MiniFeatures() {
   return (
-    <section className="py-28 px-6" style={{ borderTop: "1px solid var(--border)" }}>
+    <section className="py-16 md:py-28 px-6" style={{ borderTop: "1px solid var(--border)" }}>
       <div className="max-w-6xl mx-auto">
         <div className="mb-16">
           <p className="text-xs font-semibold uppercase tracking-widest mb-4" style={{ color: "var(--blue)" }}>
@@ -275,7 +271,7 @@ function MiniFeatures() {
             Everything else you&apos;d want.
           </h2>
         </div>
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-10">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-10">
           {miniFeatures.map((f) => (
             <div key={f.label} className="flex flex-col gap-6">
               <div className="flex justify-center">
@@ -312,7 +308,7 @@ function Independence() {
   ];
 
   return (
-    <section className="py-28 px-6" style={{ borderTop: "1px solid var(--border)" }}>
+    <section className="py-16 md:py-28 px-6" style={{ borderTop: "1px solid var(--border)" }}>
       <div className="max-w-6xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-[1fr_2fr] gap-20 items-start">
           <div>
