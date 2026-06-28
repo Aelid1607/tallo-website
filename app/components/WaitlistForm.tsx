@@ -39,7 +39,7 @@ export default function WaitlistForm() {
         </div>
         <p className="text-base font-semibold">You&apos;re on the list.</p>
         <p className="text-sm" style={{ color: "rgba(255,255,255,0.5)" }}>
-          We&apos;ll notify you at {email} when Tallo launches.
+          We&apos;ll notify you at {email} when Tallo for Android launches.
         </p>
       </div>
     );
@@ -48,7 +48,7 @@ export default function WaitlistForm() {
   return (
     <form onSubmit={handleSubmit} className="w-full max-w-md mx-auto">
       <p className="text-sm font-medium mb-3" style={{ color: "rgba(255,255,255,0.6)" }}>
-        Notify me when it launches
+        Notify me when Android launches
       </p>
       <div className="flex gap-2">
         <input
@@ -75,7 +75,7 @@ export default function WaitlistForm() {
       </div>
       {status === "error" && (
         <p className="mt-2 text-xs text-center" style={{ color: "rgba(255,100,100,0.9)" }}>
-          Something went wrong — try again or email brett@talloapp.com.au
+          Something went wrong. Try again or email brett@talloapp.com.au
         </p>
       )}
     </form>

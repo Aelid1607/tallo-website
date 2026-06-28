@@ -2,12 +2,12 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Tallo — Smarter Grocery Shopping",
+  title: "Tallo:Smarter Grocery Shopping",
   description:
     "Compare grocery prices across Coles, Woolworths, and Aldi. Know what your shop costs before you leave the house.",
   metadataBase: new URL("https://talloapp.com.au"),
   openGraph: {
-    title: "Tallo — Smarter Grocery Shopping",
+    title: "Tallo:Smarter Grocery Shopping",
     description:
       "Compare grocery prices across Coles, Woolworths, and Aldi. Know what your shop costs before you leave the house.",
     url: "https://talloapp.com.au",
@@ -17,7 +17,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Tallo — Smarter Grocery Shopping",
+    title: "Tallo:Smarter Grocery Shopping",
     description:
       "Compare grocery prices across Coles, Woolworths, and Aldi. Know what your shop costs before you leave the house.",
   },

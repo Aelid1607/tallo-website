@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Privacy Policy — Tallo",
+  title: "Privacy Policy:Tallo",
   description: "How Tallo collects, uses, and protects your personal information.",
 };
 
@@ -11,12 +12,8 @@ export default function PrivacyPage() {
     <>
       <header style={{ borderBottom: "1px solid var(--border)" }}>
         <div className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
-          <Link
-            href="/"
-            className="text-xl font-bold transition-opacity hover:opacity-70"
-            style={{ color: "var(--black)", letterSpacing: "-0.03em" }}
-          >
-            tallo
+          <Link href="/" className="transition-opacity hover:opacity-70">
+            <Image src="/tallo-logo-tagline.svg" alt="Tallo" width={140} height={42} />
           </Link>
           <Link
             href="/"
@@ -85,27 +82,27 @@ export default function PrivacyPage() {
             <h4>4.1 Device Data (not transmitted to Tallo)</h4>
             <p>The following information is stored solely on your device and is not transmitted to Tallo&apos;s servers under any circumstances:</p>
             <ul>
-              <li><strong>Favourites</strong> — products you save as favourites are stored in your device&apos;s local storage. Tallo does not receive, access, or hold this information.</li>
-              <li><strong>Shopping list</strong> — your shopping list is held in application memory for the duration of your session only and is not persisted to any server.</li>
-              <li><strong>Loyalty card numbers</strong> — if you elect to save a Flybuys or Everyday Rewards card number, it is stored on your device only and is not transmitted to Tallo&apos;s servers.</li>
-              <li><strong>Camera</strong> — the App requests access to your device camera for the sole purpose of scanning grocery barcodes. The live camera feed is not recorded, stored, or transmitted. Only the decoded barcode value is used, and only where you elect to submit a product contribution.</li>
+              <li><strong>Favourites</strong>:products you save as favourites are stored in your device&apos;s local storage. Tallo does not receive, access, or hold this information.</li>
+              <li><strong>Shopping list</strong>:your shopping list is held in application memory for the duration of your session only and is not persisted to any server.</li>
+              <li><strong>Loyalty card numbers</strong>:if you elect to save a Flybuys or Everyday Rewards card number, it is stored on your device only and is not transmitted to Tallo&apos;s servers.</li>
+              <li><strong>Camera</strong>:the App requests access to your device camera for the sole purpose of scanning grocery barcodes. The live camera feed is not recorded, stored, or transmitted. Only the decoded barcode value is used, and only where you elect to submit a product contribution.</li>
             </ul>
 
             <h4>4.2 Server Data (stored on Tallo&apos;s servers)</h4>
             <p>Tallo collects the following Personal Information:</p>
             <ul>
-              <li><strong>Account information</strong> — upon signing in with Google or Apple, Tallo receives a unique identifier and basic profile information (name and email address) from the relevant provider.</li>
-              <li><strong>Recipe ratings</strong> — where you submit a star rating for a recipe, that rating is stored in Tallo&apos;s database linked to your user identifier.</li>
-              <li><strong>Recipe comments</strong> — where you submit a comment on a recipe, the comment text and your display name are stored in Tallo&apos;s database.</li>
-              <li><strong>Feedback and bug reports</strong> — content submitted through the in-app feedback form, including any accompanying name or email address.</li>
-              <li><strong>Barcode and price contributions</strong> — product information you submit to assist in improving the product catalogue.</li>
+              <li><strong>Account information</strong>:upon signing in with Google or Apple, Tallo receives a unique identifier and basic profile information (name and email address) from the relevant provider.</li>
+              <li><strong>Recipe ratings</strong>:where you submit a star rating for a recipe, that rating is stored in Tallo&apos;s database linked to your user identifier.</li>
+              <li><strong>Recipe comments</strong>:where you submit a comment on a recipe, the comment text and your display name are stored in Tallo&apos;s database.</li>
+              <li><strong>Feedback and bug reports</strong>:content submitted through the in-app feedback form, including any accompanying name or email address.</li>
+              <li><strong>Barcode and price contributions</strong>:product information you submit to assist in improving the product catalogue.</li>
             </ul>
 
             <h4>4.3 Automatically Collected Information</h4>
             <ul>
-              <li><strong>Authentication identifier</strong> — upon sign-in, Tallo receives a unique identifier from your chosen sign-in provider (Google or Apple).</li>
-              <li><strong>Anonymous session identifier</strong> — prior to sign-in, Firebase generates a randomly assigned installation identifier to enable basic App functionality. This identifier is not linked to your identity.</li>
-              <li><strong>Firebase SDK diagnostic data</strong> — the Firebase SDK may automatically collect limited technical data including app version, SDK version, and installation identifiers for the purposes of SDK stability. This data is collected by Google LLC pursuant to their own privacy policy and is not accessible to or controlled by Tallo.</li>
+              <li><strong>Authentication identifier</strong>:upon sign-in, Tallo receives a unique identifier from your chosen sign-in provider (Google or Apple).</li>
+              <li><strong>Anonymous session identifier</strong>:prior to sign-in, Firebase generates a randomly assigned installation identifier to enable basic App functionality. This identifier is not linked to your identity.</li>
+              <li><strong>Firebase SDK diagnostic data</strong>:the Firebase SDK may automatically collect limited technical data including app version, SDK version, and installation identifiers for the purposes of SDK stability. This data is collected by Google LLC pursuant to their own privacy policy and is not accessible to or controlled by Tallo.</li>
             </ul>
 
             <h4>4.4 Information Tallo Does Not Collect</h4>
@@ -228,10 +225,10 @@ export default function PrivacyPage() {
           <Section title="10. Your Rights">
             <p>Under the Australian Privacy Principles, you have the following rights:</p>
             <ul>
-              <li><strong>Access</strong> — you may request access to the Personal Information Tallo holds about you.</li>
-              <li><strong>Correction</strong> — you may request correction of Personal Information that is inaccurate, out of date, incomplete, or misleading.</li>
-              <li><strong>Deletion</strong> — you may delete your account and all associated Server Data at any time from within the App via <strong>Settings → Delete Account</strong>. This action permanently deletes your account information, ratings, and comments from Tallo&apos;s servers. Device Data is removed upon uninstallation of the App.</li>
-              <li><strong>Complaint</strong> — you may lodge a complaint if you believe Tallo has interfered with your privacy.</li>
+              <li><strong>Access</strong>:you may request access to the Personal Information Tallo holds about you.</li>
+              <li><strong>Correction</strong>:you may request correction of Personal Information that is inaccurate, out of date, incomplete, or misleading.</li>
+              <li><strong>Deletion</strong>:you may delete your account and all associated Server Data at any time from within the App via <strong>Settings → Delete Account</strong>. This action permanently deletes your account information, ratings, and comments from Tallo&apos;s servers. Device Data is removed upon uninstallation of the App.</li>
+              <li><strong>Complaint</strong>:you may lodge a complaint if you believe Tallo has interfered with your privacy.</li>
             </ul>
             <p>
               To exercise any of the above rights, or for assistance with account deletion, contact Tallo at{" "}
