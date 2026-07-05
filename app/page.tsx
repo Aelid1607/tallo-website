@@ -259,12 +259,6 @@ const miniFeatures = [
     alt: "Price watch screen tracking price rises and shrinkflation",
   },
   {
-    label: "Dietary Filters",
-    body: "Filter the full catalogue by Gluten Free, Vegan, Vegetarian or High Protein. Browse 20,000 products your way.",
-    screenshot: "/screenshots/dietary-filters.png",
-    alt: "Dietary filters screen",
-  },
-  {
     label: "Loyalty Cards",
     body: "Store your Flybuys and Everyday Rewards barcodes in the app. Always on hand when you reach the checkout.",
     screenshot: "/screenshots/loyalty-card.jpg",
