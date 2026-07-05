@@ -3,7 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Privacy Policy:Tallo",
+  title: "Privacy Policy: Tallo",
   description: "How Tallo collects, uses, and protects your personal information.",
 };
 
@@ -15,34 +15,25 @@ export default function PrivacyPage() {
           <Link href="/" className="transition-opacity hover:opacity-70">
             <Image src="/tallo-logo-tagline.svg" alt="Tallo" width={140} height={42} />
           </Link>
-          <Link
-            href="/"
-            className="text-sm"
-            style={{ color: "var(--muted)" }}
-          >
-            ← Back
+          <Link href="/" className="text-sm" style={{ color: "var(--muted)" }}>
+            Back
           </Link>
         </div>
       </header>
       <main className="max-w-3xl mx-auto px-6 py-20">
         <div className="mb-12">
-          <p
-            className="text-xs font-semibold uppercase tracking-widest mb-4"
-            style={{ color: "var(--blue)" }}
-          >
+          <p className="text-xs font-semibold uppercase tracking-widest mb-4" style={{ color: "var(--blue)" }}>
             Legal
           </p>
-          <h1
-            className="text-4xl font-bold mb-3"
-            style={{ letterSpacing: "-0.03em", color: "var(--black)" }}
-          >
+          <h1 className="text-4xl font-bold mb-3" style={{ letterSpacing: "-0.03em", color: "var(--black)" }}>
             Privacy Policy
           </h1>
           <p className="text-sm" style={{ color: "var(--muted)" }}>
-            Last updated: 25 June 2026
+            Last updated: 4 July 2026
           </p>
         </div>
         <div className="prose-legal">
+
           <Section title="1. Introduction">
             <p>
               This Privacy Policy (the &quot;Policy&quot;) sets out how Tallo (&quot;Tallo&quot;,
@@ -56,7 +47,7 @@ export default function PrivacyPage() {
             </p>
             <p>
               This Policy is available at talloapp.com.au/privacy and from within the App
-              at any time via <strong>Settings → Privacy Policy</strong>. By creating an account
+              at any time via <strong>Settings &rarr; Privacy Policy</strong>. By creating an account
               or using the App, you acknowledge that you have read and understood this Policy.
             </p>
           </Section>
@@ -71,38 +62,48 @@ export default function PrivacyPage() {
             </ul>
           </Section>
 
-          <Section title="3. Contact Information">
+          <Section title="3. Who We Are">
+            <p>Tallo is operated by Tallo Pty Ltd (ACN 699 854 692), registered in Australia.</p>
             <p>
-              <strong>Email:</strong> <a href="mailto:info@talloapp.com.au">info@talloapp.com.au</a><br />
+              <strong>Email:</strong> <a href="mailto:privacy@talloapp.com.au">privacy@talloapp.com.au</a><br />
               <strong>Website:</strong> talloapp.com.au
             </p>
           </Section>
 
           <Section title="4. Collection of Personal Information">
-            <h4>4.1 Device Data (not transmitted to Tallo)</h4>
-            <p>The following information is stored solely on your device and is not transmitted to Tallo&apos;s servers under any circumstances:</p>
+            <h4>4.1 Device Data (stored on your device by default)</h4>
+            <p>
+              The following information is stored on your device by default. Where you elect to use the
+              optional cloud backup feature, this data is also uploaded to Tallo&apos;s servers as described
+              in clause 4.2(f).
+            </p>
             <ul>
-              <li><strong>Favourites</strong>:products you save as favourites are stored in your device&apos;s local storage. Tallo does not receive, access, or hold this information.</li>
-              <li><strong>Shopping list</strong>:your shopping list is held in application memory for the duration of your session only and is not persisted to any server.</li>
-              <li><strong>Loyalty card numbers</strong>:if you elect to save a Flybuys or Everyday Rewards card number, it is stored on your device only and is not transmitted to Tallo&apos;s servers.</li>
-              <li><strong>Camera</strong>:the App requests access to your device camera for the sole purpose of scanning grocery barcodes. The live camera feed is not recorded, stored, or transmitted. Only the decoded barcode value is used, and only where you elect to submit a product contribution.</li>
+              <li><strong>Favourites</strong> - products you save as favourites are stored in your device&apos;s local storage.</li>
+              <li><strong>Shopping list and saved lists</strong> - your current shopping list and any saved lists are stored in your device&apos;s local storage.</li>
+              <li><strong>Loyalty card numbers</strong> - if you elect to save a Flybuys or Everyday Rewards card number, it is stored on your device&apos;s local storage.</li>
+              <li><strong>Meal plan, liquor list, shop history, and lifetime stats</strong> - these items are stored in your device&apos;s local storage.</li>
+              <li><strong>Camera</strong> - the App requests access to your device camera for the sole purpose of scanning grocery barcodes. The live camera feed is not recorded, stored, or transmitted. Only the decoded barcode value is used, and only where you elect to submit a product contribution.</li>
             </ul>
 
             <h4>4.2 Server Data (stored on Tallo&apos;s servers)</h4>
             <p>Tallo collects the following Personal Information:</p>
             <ul>
-              <li><strong>Account information</strong>:upon signing in with Google or Apple, Tallo receives a unique identifier and basic profile information (name and email address) from the relevant provider.</li>
-              <li><strong>Recipe ratings</strong>:where you submit a star rating for a recipe, that rating is stored in Tallo&apos;s database linked to your user identifier.</li>
-              <li><strong>Recipe comments</strong>:where you submit a comment on a recipe, the comment text and your display name are stored in Tallo&apos;s database.</li>
-              <li><strong>Feedback and bug reports</strong>:content submitted through the in-app feedback form, including any accompanying name or email address.</li>
-              <li><strong>Barcode and price contributions</strong>:product information you submit to assist in improving the product catalogue.</li>
+              <li><strong>(a) Account information</strong> - upon signing in with Google or Apple, Tallo receives a unique identifier and basic profile information (name and email address) from the relevant provider.</li>
+              <li><strong>(b) Recipe ratings</strong> - where you submit a star rating for a recipe, that rating is stored in Tallo&apos;s database linked to your user identifier.</li>
+              <li><strong>(c) Recipe comments</strong> - where you submit a comment on a recipe, the comment text and your display name are stored in Tallo&apos;s database.</li>
+              <li><strong>(d) Feedback and bug reports</strong> - content submitted through the in-app feedback form, including any accompanying name or email address.</li>
+              <li><strong>(e) Barcode and price contributions</strong> - product information you submit to assist in improving the product catalogue.</li>
+              <li><strong>(f) Cloud backup data</strong> - where you elect to use the cloud backup feature, the full contents of your device&apos;s local storage are uploaded to Tallo&apos;s servers. This includes your shopping list, saved lists, favourites, loyalty card numbers, meal plan, liquor list, shop history, and lifetime stats. Backup data is stored under your user identifier and is accessible only to you. No backup is created unless you explicitly initiate one.</li>
+              <li><strong>(g) Shared shopping lists</strong> - where you elect to share a shopping list, the list items (including product names, store names, prices, quantities, and internal product identifiers) are written to Tallo&apos;s servers without a user identifier. Shared lists expire automatically after 48 hours and are then permanently deleted.</li>
+              <li><strong>(h) Push notification token</strong> - where you grant notification permission, Tallo stores a device push notification token and your device platform type (iOS or Android) under your user identifier to enable delivery of in-app notifications.</li>
+              <li><strong>(i) Watchlist product identifiers</strong> - the internal product identifiers corresponding to items in your active shopping list are automatically synchronised to Tallo&apos;s servers under your user identifier to support watchlist and price-alert functionality.</li>
             </ul>
 
             <h4>4.3 Automatically Collected Information</h4>
             <ul>
-              <li><strong>Authentication identifier</strong>:upon sign-in, Tallo receives a unique identifier from your chosen sign-in provider (Google or Apple).</li>
-              <li><strong>Anonymous session identifier</strong>:prior to sign-in, Firebase generates a randomly assigned installation identifier to enable basic App functionality. This identifier is not linked to your identity.</li>
-              <li><strong>Firebase SDK diagnostic data</strong>:the Firebase SDK may automatically collect limited technical data including app version, SDK version, and installation identifiers for the purposes of SDK stability. This data is collected by Google LLC pursuant to their own privacy policy and is not accessible to or controlled by Tallo.</li>
+              <li><strong>Authentication identifier</strong> - upon sign-in, Tallo receives a unique identifier from your chosen sign-in provider (Google or Apple).</li>
+              <li><strong>Anonymous session identifier</strong> - prior to sign-in, Firebase generates a randomly assigned installation identifier to enable basic App functionality. This identifier is not linked to your identity.</li>
+              <li><strong>Firebase SDK diagnostic data</strong> - the Firebase SDK may automatically collect limited technical data including app version, SDK version, and installation identifiers for the purposes of SDK stability. This data is collected by Google LLC pursuant to their own privacy policy and is not accessible to or controlled by Tallo.</li>
             </ul>
 
             <h4>4.4 Information Tallo Does Not Collect</h4>
@@ -133,6 +134,10 @@ export default function PrivacyPage() {
                 <tr><td>Displaying recipe comments</td><td>User identifier, display name, comment text</td><td>Firebase (Google LLC)</td></tr>
                 <tr><td>Responding to feedback and bug reports</td><td>Name, email address, message content</td><td>Email / Firebase (Google LLC)</td></tr>
                 <tr><td>Improving the product catalogue</td><td>Barcode and price contribution data</td><td>Firebase (Google LLC)</td></tr>
+                <tr><td>Cloud backup and restore</td><td>Shopping list, saved lists, favourites, loyalty card numbers, meal plan, liquor list, shop history, lifetime stats</td><td>Firebase (Google LLC)</td></tr>
+                <tr><td>List sharing</td><td>List item names, store names, prices, quantities, product identifiers (no user identifier)</td><td>Firebase (Google LLC)</td></tr>
+                <tr><td>Push notifications</td><td>Device push token, device platform</td><td>Firebase (Google LLC)</td></tr>
+                <tr><td>Watchlist and price alerts</td><td>Shopping list product identifiers</td><td>Firebase (Google LLC)</td></tr>
                 <tr><td>Fraud prevention and abuse detection</td><td>Account identifier, sign-in provider</td><td>Firebase (Google LLC)</td></tr>
                 <tr><td>Firebase SDK stability and performance</td><td>Anonymous installation and version data (Google LLC)</td><td>Google LLC</td></tr>
                 <tr><td>Compliance with legal obligations</td><td>Any relevant information</td><td>As required by law</td></tr>
@@ -175,15 +180,19 @@ export default function PrivacyPage() {
 
           <Section title="8. Data Storage and Security">
             <h4>8.1 Device Data</h4>
-            <p>The following information is stored solely on your device and is not held by Tallo:</p>
+            <p>
+              The following information is stored on your device. Items marked with an asterisk (*) are also
+              uploaded to Firebase if you choose to use the cloud backup feature.
+            </p>
             <table>
               <thead>
                 <tr><th>Data</th><th>Storage mechanism</th></tr>
               </thead>
               <tbody>
-                <tr><td>Favourites</td><td>Device local storage</td></tr>
-                <tr><td>Shopping list</td><td>Application memory (session only)</td></tr>
-                <tr><td>Loyalty card numbers</td><td>Device local storage</td></tr>
+                <tr><td>Favourites *</td><td>Device local storage</td></tr>
+                <tr><td>Shopping list and saved lists *</td><td>Device local storage</td></tr>
+                <tr><td>Loyalty card numbers *</td><td>Device local storage</td></tr>
+                <tr><td>Meal plan, liquor list, shop history, lifetime stats *</td><td>Device local storage</td></tr>
               </tbody>
             </table>
 
@@ -199,6 +208,10 @@ export default function PrivacyPage() {
                 <tr><td>Recipe comments</td><td>Recipe community functionality</td></tr>
                 <tr><td>Feedback and bug reports</td><td>App improvement</td></tr>
                 <tr><td>Barcode and price contributions</td><td>Product catalogue improvement</td></tr>
+                <tr><td>Cloud backup (shopping list, saved lists, favourites, loyalty card numbers, meal plan, liquor list, shop history, lifetime stats)</td><td>User-initiated cloud backup and restore</td></tr>
+                <tr><td>Shared list items (product names, store names, prices, quantities, product identifiers)</td><td>Temporary list sharing between users (48-hour expiry)</td></tr>
+                <tr><td>Push notification token, device platform</td><td>Delivery of in-app push notifications</td></tr>
+                <tr><td>Shopping list product identifiers (watchlist)</td><td>Watchlist and price-alert functionality</td></tr>
               </tbody>
             </table>
             <p>All data held in Firebase is protected by industry-standard encryption in transit (TLS) and at rest. Administrative access to Tallo&apos;s Firebase project is restricted to senior app developers.</p>
@@ -216,6 +229,10 @@ export default function PrivacyPage() {
                 <tr><td>Recipe comments</td><td>Until deletion by the user, account deletion, or written request for removal</td></tr>
                 <tr><td>Feedback and bug reports</td><td>Up to two (2) years from submission, then deleted</td></tr>
                 <tr><td>Barcode and price contributions</td><td>Retained indefinitely as part of the product catalogue</td></tr>
+                <tr><td>Cloud backup data</td><td>Until the user overwrites the backup with a new one, deletes their account, or submits a written request for removal</td></tr>
+                <tr><td>Shared list data</td><td>Automatically deleted 48 hours after creation</td></tr>
+                <tr><td>Push notification token and device platform</td><td>Until account deletion or written request for removal</td></tr>
+                <tr><td>Watchlist product identifiers</td><td>Until the shopping list is cleared, account deletion, or written request for removal</td></tr>
                 <tr><td>Anonymous session identifiers</td><td>Until sign-in or uninstallation of the App</td></tr>
                 <tr><td>Firebase SDK diagnostic data</td><td>Subject to Google LLC&apos;s retention policy</td></tr>
               </tbody>
@@ -225,14 +242,14 @@ export default function PrivacyPage() {
           <Section title="10. Your Rights">
             <p>Under the Australian Privacy Principles, you have the following rights:</p>
             <ul>
-              <li><strong>Access</strong>:you may request access to the Personal Information Tallo holds about you.</li>
-              <li><strong>Correction</strong>:you may request correction of Personal Information that is inaccurate, out of date, incomplete, or misleading.</li>
-              <li><strong>Deletion</strong>:you may delete your account and all associated Server Data at any time from within the App via <strong>Settings → Delete Account</strong>. This action permanently deletes your account information, ratings, and comments from Tallo&apos;s servers. Device Data is removed upon uninstallation of the App.</li>
-              <li><strong>Complaint</strong>:you may lodge a complaint if you believe Tallo has interfered with your privacy.</li>
+              <li><strong>Access</strong> - you may request access to the Personal Information Tallo holds about you.</li>
+              <li><strong>Correction</strong> - you may request correction of Personal Information that is inaccurate, out of date, incomplete, or misleading.</li>
+              <li><strong>Deletion</strong> - you may delete your account and all associated Server Data at any time from within the App via <strong>Settings &rarr; Delete Account</strong>. This action permanently deletes your account information, ratings, comments, cloud backup, push notification token, and watchlist data from Tallo&apos;s servers. Shared lists you have created expire automatically after 48 hours regardless of account status. Device Data is removed upon uninstallation of the App.</li>
+              <li><strong>Complaint</strong> - you may lodge a complaint if you believe Tallo has interfered with your privacy.</li>
             </ul>
             <p>
               To exercise any of the above rights, or for assistance with account deletion, contact Tallo at{" "}
-              <a href="mailto:brett@talloapp.com.au">brett@talloapp.com.au</a>. Tallo will respond within 30 days of receipt of your request.
+              <a href="mailto:info@talloapp.com.au">info@talloapp.com.au</a>. Tallo will respond within 30 days of receipt of your request.
             </p>
             <p>
               If you are not satisfied with Tallo&apos;s response, you may lodge a complaint with the{" "}
@@ -249,8 +266,8 @@ export default function PrivacyPage() {
               The App is not directed at children under the age of 13. Tallo does not knowingly collect
               Personal Information from children under 13. If you have reason to believe that a child under
               13 has provided Personal Information to Tallo, please contact{" "}
-              <a href="mailto:info@talloapp.com.au">info@talloapp.com.au</a> and Tallo will take prompt
-              steps to delete that information.
+              <a href="mailto:privacy@talloapp.com.au">privacy@talloapp.com.au</a> and Tallo will take
+              prompt steps to delete that information.
             </p>
           </Section>
 
@@ -287,8 +304,8 @@ export default function PrivacyPage() {
 
           <Section title="15. Governing Law">
             <p>
-              This Policy is governed by the laws of the State of Victoria, Australia. You submit to the
-              non-exclusive jurisdiction of the courts of Victoria and the federal courts of Australia.
+              This Policy is governed by the laws of the State of New South Wales, Australia. You submit to the
+              non-exclusive jurisdiction of the courts of New South Wales and the federal courts of Australia.
             </p>
           </Section>
 
@@ -300,9 +317,11 @@ export default function PrivacyPage() {
           </Section>
 
           <Section title="17. Contact">
+            <p>For all privacy-related enquiries, requests, or complaints:</p>
             <p>
-              <strong>Operator:</strong> TalloApp<br />
-              <strong>Email:</strong> <a href="mailto:info@talloapp.com.au">info@talloapp.com.au</a><br />
+              <strong>Operator:</strong> Tallo Pty Ltd (ACN 699 854 692)<br />
+              <strong>Privacy enquiries:</strong> <a href="mailto:privacy@talloapp.com.au">privacy@talloapp.com.au</a><br />
+              <strong>General enquiries:</strong> <a href="mailto:info@talloapp.com.au">info@talloapp.com.au</a><br />
               <strong>Website:</strong> talloapp.com.au<br />
               <strong>Jurisdiction:</strong> New South Wales, Australia
             </p>
@@ -313,14 +332,17 @@ export default function PrivacyPage() {
               </em>
             </p>
           </Section>
+
         </div>
       </main>
       <footer className="py-10 px-6" style={{ borderTop: "1px solid var(--border)" }}>
         <div className="max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
-          <span className="text-base font-bold" style={{ color: "var(--black)", letterSpacing: "-0.03em" }}>tallo</span>
+          <Link href="/" className="transition-opacity hover:opacity-70">
+            <Image src="/tallo-logo-tagline.svg" alt="Tallo" width={140} height={42} />
+          </Link>
           <div className="flex items-center gap-6 text-sm" style={{ color: "var(--muted)" }}>
             <Link href="/privacy" style={{ color: "inherit" }}>Privacy Policy</Link>
-            <Link href="/terms" style={{ color: "inherit" }}>Terms & Conditions</Link>
+            <Link href="/terms" style={{ color: "inherit" }}>Terms &amp; Conditions</Link>
             <span>© {new Date().getFullYear()} Tallo. Australia.</span>
           </div>
         </div>

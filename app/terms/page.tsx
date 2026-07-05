@@ -29,7 +29,7 @@ export default function TermsPage() {
             Terms &amp; Conditions
           </h1>
           <p className="text-sm" style={{ color: "var(--muted)" }}>
-            Last updated: 25 June 2026
+            Last updated: 4 July 2026
           </p>
         </div>
         <div className="prose-legal">
@@ -41,7 +41,7 @@ export default function TermsPage() {
               <li><strong>&ldquo;App&rdquo;</strong> means the Tallo mobile application, including all features, content, and updates.</li>
               <li><strong>&ldquo;Content&rdquo;</strong> means all text, images, data, recipes, pricing information, product details, and other material made available through the App.</li>
               <li><strong>&ldquo;Retailer&rdquo;</strong> means any grocery retailer whose product or pricing information is displayed in the App, including but not limited to Coles Supermarkets Australia Pty Ltd, Woolworths Group Limited, and ALDI Stores.</li>
-              <li><strong>&ldquo;Tallo&rdquo;</strong>, <strong>&ldquo;we&rdquo;</strong>, <strong>&ldquo;us&rdquo;</strong>, <strong>&ldquo;our&rdquo;</strong> means the operator of the App.</li>
+              <li><strong>&ldquo;Tallo&rdquo;</strong>, <strong>&ldquo;we&rdquo;</strong>, <strong>&ldquo;us&rdquo;</strong>, <strong>&ldquo;our&rdquo;</strong> means Tallo Pty Ltd (ACN 699 854 692), the operator of the App.</li>
               <li><strong>&ldquo;Terms&rdquo;</strong> means these Terms and Conditions, as amended from time to time.</li>
               <li><strong>&ldquo;User Content&rdquo;</strong> means any content you submit to the App, including barcode information, price reports, recipe comments, and star ratings.</li>
               <li><strong>&ldquo;you&rdquo;</strong>, <strong>&ldquo;your&rdquo;</strong> means the individual accessing or using the App.</li>
@@ -75,7 +75,7 @@ export default function TermsPage() {
             <p><strong>4.1</strong> Certain features of the App require you to register an account by signing in with Google or Apple. By registering, you agree to:</p>
             <p>(a) provide accurate and complete information;</p>
             <p>(b) maintain the security and confidentiality of your sign-in credentials;</p>
-            <p>(c) notify us promptly at <a href="mailto:info@talloapp.com.au">info@talloapp.com.au</a> if you become aware of any unauthorised access to or use of your account;</p>
+            <p>(c) notify us promptly at <a href="mailto:support@talloapp.com.au">support@talloapp.com.au</a> if you become aware of any unauthorised access to or use of your account;</p>
             <p>(d) accept responsibility for all activity conducted through your account.</p>
             <p><strong>4.2</strong> Tallo is not liable for any loss or damage arising from your failure to maintain the security of your account credentials.</p>
             <p><strong>4.3</strong> Tallo reserves the right to suspend or terminate your account at any time if it reasonably believes you have violated these Terms.</p>
@@ -146,10 +146,11 @@ export default function TermsPage() {
           </Section>
 
           <Section title="11. Third-Party Services">
-            <p><strong>11.1</strong> The App integrates third-party services including Google Firebase, Google Sign-In, and Apple Sign in with Apple. Your use of those services is subject to their respective terms and policies:</p>
+            <p><strong>11.1</strong> The App integrates third-party services including Google Firebase, Google Sign-In, Apple Sign in with Apple, and Expo (for push notification delivery). Your use of those services is subject to their respective terms and policies:</p>
             <ul>
               <li>Google Terms of Service: policies.google.com/terms</li>
               <li>Apple Media Services Terms and Conditions: apple.com/legal/internet-services/terms/site.html</li>
+              <li>Expo Terms of Service: expo.dev/terms</li>
             </ul>
             <p><strong>11.2</strong> Tallo is not responsible for the availability, accuracy, content, products, or practices of any third-party service provider. Any issues with third-party services should be directed to the relevant provider.</p>
           </Section>
@@ -228,8 +229,12 @@ export default function TermsPage() {
 
           <Section title="22. Contact">
             <p>For all enquiries relating to these Terms:</p>
-            <p><strong>Email:</strong> <a href="mailto:info@talloapp.com.au">info@talloapp.com.au</a></p>
-            <p><strong>Website:</strong> talloapp.com.au</p>
+            <p>
+              <strong>Operator:</strong> Tallo Pty Ltd (ACN 699 854 692)<br />
+              <strong>Support:</strong> <a href="mailto:support@talloapp.com.au">support@talloapp.com.au</a><br />
+              <strong>General enquiries:</strong> <a href="mailto:info@talloapp.com.au">info@talloapp.com.au</a><br />
+              <strong>Website:</strong> talloapp.com.au
+            </p>
             <p><em>These Terms are prepared in accordance with the Competition and Consumer Act 2010 (Cth), the Australian Consumer Law, and the requirements of the Apple App Store and Google Play Store.</em></p>
           </Section>
 

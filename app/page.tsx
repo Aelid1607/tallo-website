@@ -31,12 +31,28 @@ function Nav() {
   );
 }
 
+// For already-framed app screenshots (new mockups)
+function PhoneDisplay({ src, alt, width = 280 }: { src: string; alt: string; width?: number }) {
+  return (
+    <div style={{ width, maxWidth: "100%", flexShrink: 0, filter: "drop-shadow(0 32px 64px rgba(0,0,0,0.2))" }}>
+      <Image
+        src={src}
+        alt={alt}
+        width={width}
+        height={Math.round(width * 2.045)}
+        loading="eager"
+        style={{ display: "block", width: "100%", height: "auto" }}
+      />
+    </div>
+  );
+}
+
+// For raw screenshots (mini features)
 function PhoneFrame({ src, alt, width = 260 }: { src: string; alt: string; width?: number }) {
   const pad = 10;
   const r = Math.round(width * 0.177);
   const ir = Math.round(width * 0.148);
   const inner = width - pad * 2;
-
   return (
     <div
       style={{
@@ -50,13 +66,10 @@ function PhoneFrame({ src, alt, width = 260 }: { src: string; alt: string; width
         flexShrink: 0,
       }}
     >
-      {/* Power button */}
       <div style={{ position: "absolute", right: -3, top: Math.round(width * 0.41), width: 3, height: Math.round(width * 0.17), background: "#2a2a2a", borderRadius: "0 2px 2px 0" }} />
-      {/* Silent + volume */}
       <div style={{ position: "absolute", left: -3, top: Math.round(width * 0.30), width: 3, height: Math.round(width * 0.10), background: "#2a2a2a", borderRadius: "2px 0 0 2px" }} />
       <div style={{ position: "absolute", left: -3, top: Math.round(width * 0.45), width: 3, height: Math.round(width * 0.14), background: "#2a2a2a", borderRadius: "2px 0 0 2px" }} />
       <div style={{ position: "absolute", left: -3, top: Math.round(width * 0.63), width: 3, height: Math.round(width * 0.14), background: "#2a2a2a", borderRadius: "2px 0 0 2px" }} />
-
       <div style={{ borderRadius: ir, overflow: "hidden" }}>
         <Image
           src={src}
@@ -100,8 +113,7 @@ function Hero() {
               <span style={{ color: "var(--blue)" }}>before you leave home.</span>
             </h1>
             <p className="text-lg leading-relaxed mb-10" style={{ color: "var(--muted)" }}>
-              Tallo compares 20,000+ products across Coles, Woolworths and Aldi.
-              Independent, unsponsored and your data stays on your device.
+              Tallo compares 20,000+ products across Coles, Woolworths and Aldi, plus beer, wine and spirits across Dan Murphy&apos;s, Liquorland and BWS. Independent, unsponsored and your data stays on your device.
             </p>
             <div className="flex flex-col gap-4">
               <div className="flex items-center gap-3 flex-wrap">
@@ -134,10 +146,10 @@ function Hero() {
           </div>
 
           <div className="flex justify-center lg:justify-end">
-            <PhoneFrame
-              src="/screenshots/price-comparison.png"
-              alt="Tallo showing price comparison across Coles, Woolworths and Aldi"
-              width={280}
+            <PhoneDisplay
+              src="/screenshots/home-screen.png"
+              alt="Tallo home screen showing price comparison, meal planning and recipe costs"
+              width={300}
             />
           </div>
         </div>
@@ -149,7 +161,7 @@ function Hero() {
 function StatsBar() {
   const stats = [
     { value: "20,000+", label: "products tracked" },
-    { value: "3", label: "stores compared" },
+    { value: "6", label: "stores compared" },
     { value: "Zero", label: "ads ever" },
     { value: "On-device", label: "data storage" },
   ];
@@ -207,7 +219,7 @@ function FeatureSection({
       <div className="max-w-6xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
           <div className={`flex justify-center ${phoneRight ? "lg:order-last" : ""}`}>
-            <PhoneFrame src={screenshot} alt={screenshotAlt} width={280} />
+            <PhoneDisplay src={screenshot} alt={screenshotAlt} width={280} />
           </div>
           <div>
             <p className="text-xs font-semibold uppercase tracking-widest mb-4" style={{ color: "var(--blue)" }}>
@@ -236,9 +248,15 @@ function FeatureSection({
 const miniFeatures = [
   {
     label: "Barcode Scanner",
-    body: "Point your camera at any grocery barcode to compare prices across all three stores in seconds. 22,000+ barcodes in the database.",
+    body: "Point your camera at any grocery barcode to compare prices across all three stores in seconds. 20,000+ barcodes in the database.",
     screenshot: "/screenshots/scanner.jpg",
     alt: "Barcode scanner screen",
+  },
+  {
+    label: "Price Watch",
+    body: "Tallo tracks price changes and size reductions across the catalogue every week. Catch shrinkflation and price rises before they catch you.",
+    screenshot: "/screenshots/price-tracker.jpg",
+    alt: "Price watch screen tracking price rises and shrinkflation",
   },
   {
     label: "Dietary Filters",
@@ -251,12 +269,6 @@ const miniFeatures = [
     body: "Store your Flybuys and Everyday Rewards barcodes in the app. Always on hand when you reach the checkout.",
     screenshot: "/screenshots/loyalty-card.jpg",
     alt: "Loyalty cards screen",
-  },
-  {
-    label: "Favourites",
-    body: "Heart any product to save it. Quick access from your profile with live pricing every time you check.",
-    screenshot: "/screenshots/favourite-list.jpg",
-    alt: "Favourites list screen",
   },
 ];
 
@@ -296,7 +308,7 @@ function Independence() {
   const pillars = [
     {
       title: "Not affiliated with anyone",
-      body: "Tallo has no relationship with Coles, Woolworths or Aldi. No sponsorship, no paid placements, no affiliate deals. Prices are sourced directly from public catalogues.",
+      body: "Tallo has no relationship with Coles, Woolworths, Aldi, Dan Murphy's, Liquorland or BWS. No sponsorship, no paid placements, no affiliate deals. Prices are sourced directly from public catalogues.",
     },
     {
       title: "Your data stays on your phone",
@@ -434,66 +446,79 @@ export default function Home() {
         <Hero />
         <StatsBar />
         <FeatureSection
-          label="Weekly Specials"
-          title="Every special, across every store."
-          body="Browse this week's specials by store and category. A 5-week tracker shows which store has run more deals over time, so you know where the real value is, not just this week."
+          label="Weekly Store Winner"
+          title="Know which store wins this week."
+          body="Every Wednesday, Tallo counts which store is cheaper on more products and shows the result on your home screen. See the score at a glance, then browse that store's specials. Updated weekly from live prices."
           bullets={[
-            "5,000+ specials tracked each week",
-            "Filter by store and product category",
-            "5-week history chart to spot patterns",
+            "Weekly count across Coles, Woolworths and Aldi",
+            "Direct link to browse that store's current specials",
+            "Last 5 winners shown so you can spot patterns",
           ]}
-          screenshot="/screenshots/savings.jpg"
-          screenshotAlt="Weekly specials screen showing discounts across all stores"
+          screenshot="/screenshots/weekly-winner.png"
+          screenshotAlt="Home screen showing this week's cheapest store with product count comparison"
+          phoneRight
         />
         <FeatureSection
-          label="Smart Shopping List"
-          title="See your list sorted by where it&rsquo;s cheapest."
-          body="Add products as you browse and your list automatically calculates the total at each store. Switch into in-store Shopping Mode and items are organised by category, ready to grab and go."
+          label="Liquor"
+          title="Beer, wine and spirits - compared."
+          body="The Liquor tab brings Dan Murphy's, Liquorland and BWS into one place. Browse weekly specials by category, search across all three stores in one tap and see who has your favourite bottle cheaper before you make a trip."
           bullets={[
-            "Running totals for Coles, Woolworths and Aldi",
-            "Cheapest store badge calculated automatically",
-            "In-store mode with checkboxes by category",
+            "Dan Murphy's, Liquorland and BWS all in one app",
+            "Weekly specials and discounted lines highlighted",
+            "Search across all three stores in one place",
           ]}
-          screenshot="/screenshots/shopping-list.jpg"
-          screenshotAlt="Shopping list screen with store totals and cheapest store badge"
+          screenshot="/screenshots/liquor-home.png"
+          screenshotAlt="Liquor tab showing specials from Dan Murphy's, Liquorland and BWS"
+        />
+        <FeatureSection
+          label="Multishop"
+          title="Let Tallo split your shop for you."
+          body="Multishop calculates the cheapest combination of stores for your whole list. One item from Woolworths, four from Coles, one from Aldi - automatically worked out. Toggle Aldi on or off and see the full per-store breakdown before you leave home."
+          bullets={[
+            "Best price split calculated across all stores",
+            "Optional Aldi toggle for flexible planning",
+            "Full per-store breakdown before you shop",
+          ]}
+          screenshot="/screenshots/multishop.png"
+          screenshotAlt="Multishop screen showing best price split of $22 across Woolworths, Coles and Aldi"
+          phoneRight
+        />
+        <FeatureSection
+          label="Shopping List"
+          title="Your list, priced across every store."
+          body="Add products as you browse and your list instantly shows the running total at Coles, Woolworths and Aldi. The cheapest store is always highlighted. Tap Let's Go Shopping and items are ready to check off as you go."
+          bullets={[
+            "Live totals for all three grocery stores",
+            "Cheapest store badge calculated automatically",
+            "In-store mode with checkboxes and quantities",
+          ]}
+          screenshot="/screenshots/shopping-list-v2.png"
+          screenshotAlt="Shopping list showing store totals with Coles highlighted as cheapest at $23.31"
+        />
+        <FeatureSection
+          label="Meal Planning"
+          title="Plan your week. Know what it will cost."
+          body="Slot recipes into Breakfast, Lunch and Dinner for each day of the week. See a cost estimate per serving and a running daily total as you plan. Tap Add to list and everything goes straight to your shopping list in one go."
+          bullets={[
+            "Plan every meal across a full week",
+            "Live cost estimate per day and per serve",
+            "Add the whole week to your shopping list at once",
+          ]}
+          screenshot="/screenshots/meal-planner.png"
+          screenshotAlt="Meals tab showing weekly planner with breakfast, lunch and dinner with cost per serve"
           phoneRight
         />
         <FeatureSection
           label="Recipes"
-          title="Recipes that show you what they actually cost."
-          body="Browse curated recipes with the real cost to make based on live supermarket prices. Choose your store, swap ingredients for cheaper options, and add everything straight to your shopping list in one tap."
+          title="Recipes with real ingredient costs."
+          body="Every recipe shows a live cost breakdown matched to actual supermarket products. See exactly how much each ingredient costs, the per-serve price and a total estimate before you commit. Rate recipes, read reviews and add everything to your list in one tap."
           bullets={[
-            "Real ingredient prices, updated weekly",
-            "Choose which store you're shopping at",
-            "One tap to add all ingredients to your list",
+            "Ingredient costs matched to live supermarket prices",
+            "Per-serve and total cost estimated automatically",
+            "Rate recipes, leave reviews and share with others",
           ]}
-          screenshot="/screenshots/recipe-screen.png"
-          screenshotAlt="Recipe screen showing Bacon & Eggs with ingredient costs"
-        />
-        <FeatureSection
-          label="Meal Planning"
-          title="Plan your week. Know what it&rsquo;ll cost."
-          body="Slot recipes into Breakfast, Lunch and Dinner across the week. Use Feeling Lucky to auto-fill your week, then tap Add to List to shop for everything at once. A separate Lunchbox Planner covers Mon–Fri with Main, Fruit, Snack and Drink slots."
-          bullets={[
-            "Full week view with estimated cost per day",
-            "Feeling Lucky auto-fills your week",
-            "Separate Lunchbox Planner for school days",
-          ]}
-          screenshot="/screenshots/meal-planning.jpg"
-          screenshotAlt="Meal planning screen showing a week with breakfast, lunch and dinner"
-          phoneRight
-        />
-        <FeatureSection
-          label="Price Watch"
-          title="See what&rsquo;s gone up and what&rsquo;s been shrunk."
-          body="Tallo tracks price changes and size reductions across the catalogue every week. See exactly when prices rose, by how much, and catch shrinkflation before it catches you."
-          bullets={[
-            "Price rises, drops and shrinkflation tracked",
-            "Filter by category",
-            "Confirmed changes with exact detection dates",
-          ]}
-          screenshot="/screenshots/price-tracker.jpg"
-          screenshotAlt="Price watch screen tracking price rises and shrinkflation"
+          screenshot="/screenshots/recipe-detail.png"
+          screenshotAlt="Recipe detail showing Porridge with Honey and Banana with ingredient cost breakdown"
         />
         <MiniFeatures />
         <Independence />

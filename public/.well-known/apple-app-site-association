@@ -4,7 +4,9 @@
       {
         "appIDs": ["67RGR27SNG.au.com.talloapp"],
         "components": [
-          { "/": "/receive/*" }
+          { "/": "/receive/*" },
+          { "/": "/meals/recipe/*" },
+          { "/": "/meals/my-recipe/*" }
         ]
       }
     ]
