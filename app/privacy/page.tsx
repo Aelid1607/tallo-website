@@ -244,7 +244,7 @@ export default function PrivacyPage() {
             <ul>
               <li><strong>Access</strong> - you may request access to the Personal Information Tallo holds about you.</li>
               <li><strong>Correction</strong> - you may request correction of Personal Information that is inaccurate, out of date, incomplete, or misleading.</li>
-              <li><strong>Deletion</strong> - you may delete your account and all associated Server Data at any time from within the App via <strong>Settings &rarr; Delete Account</strong>. This action permanently deletes your account information, ratings, comments, cloud backup, push notification token, and watchlist data from Tallo&apos;s servers. Shared lists you have created expire automatically after 48 hours regardless of account status. Device Data is removed upon uninstallation of the App.</li>
+              <li><strong>Deletion</strong> - you may delete your account and all associated Server Data at any time from within the App via <strong>Settings &rarr; Delete Account</strong>, or by visiting <a href="/delete-account">talloapp.com.au/delete-account</a>. This action permanently deletes your account information, ratings, comments, cloud backup, push notification token, and watchlist data from Tallo&apos;s servers. Shared lists you have created expire automatically after 48 hours regardless of account status. Device Data is removed upon uninstallation of the App.</li>
               <li><strong>Complaint</strong> - you may lodge a complaint if you believe Tallo has interfered with your privacy.</li>
             </ul>
             <p>

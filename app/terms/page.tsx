@@ -133,9 +133,18 @@ export default function TermsPage() {
             <p>(b) the content is accurate to the best of your knowledge;</p>
             <p>(c) the submission does not infringe the intellectual property rights, privacy rights, or other rights of any third party;</p>
             <p>(d) the content does not contain any material that is false, misleading, defamatory, offensive, or otherwise unlawful.</p>
-            <h4>9.3 Moderation</h4>
+            <h4>9.3 Zero Tolerance for Objectionable Content</h4>
+            <p>Tallo has a zero-tolerance policy for objectionable content. You must not submit any User Content that:</p>
+            <p>(a) is hateful, discriminatory, or promotes violence against individuals or groups based on race, ethnicity, religion, gender, sexual orientation, disability, or any other characteristic;</p>
+            <p>(b) is sexually explicit, pornographic, or obscene;</p>
+            <p>(c) harasses, bullies, threatens, or intimidates any individual;</p>
+            <p>(d) exploits or endangers minors in any way;</p>
+            <p>(e) promotes or facilitates illegal activity.</p>
+            <p>Tallo will remove any such content promptly upon becoming aware of it. Users who submit objectionable content may have their account suspended or terminated without notice.</p>
+            <p>To report objectionable content, contact <a href="mailto:support@talloapp.com.au">support@talloapp.com.au</a>.</p>
+            <h4>9.4 Moderation</h4>
             <p>Tallo may accept, reject, modify, or remove any User Content at its sole discretion and without notice or obligation to you.</p>
-            <h4>9.4 Ownership</h4>
+            <h4>9.5 Ownership</h4>
             <p>Tallo claims no intellectual property rights over your User Content beyond the licence granted in clause 9.1. Tallo is under no obligation to attribute or credit you for any submission.</p>
           </Section>
 
