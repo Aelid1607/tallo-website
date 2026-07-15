@@ -1,8 +1,21 @@
 import Image from "next/image";
 import Link from "next/link";
-import WaitlistForm from "./components/WaitlistForm";
 
-const TESTFLIGHT_URL = "https://testflight.apple.com/join/4VfPe7z1";
+const APP_STORE_URL = "https://apps.apple.com/au/app/id6783832613";
+const GOOGLE_PLAY_URL = "https://play.google.com/store/apps/details?id=au.com.talloapp";
+
+function StoreBadges({ height = 52 }: { height?: number }) {
+  return (
+    <div className="flex items-center gap-3 flex-wrap">
+      <a href={APP_STORE_URL} target="_blank" rel="noopener noreferrer" className="transition-opacity hover:opacity-85" aria-label="Download Tallo on the App Store">
+        <Image src="/badge-appstore.svg" alt="Download on the App Store" width={Math.round(height * 3)} height={height} style={{ height, width: "auto" }} />
+      </a>
+      <a href={GOOGLE_PLAY_URL} target="_blank" rel="noopener noreferrer" className="transition-opacity hover:opacity-85" aria-label="Get Tallo on Google Play">
+        <Image src="/badge-googleplay.svg" alt="Get it on Google Play" width={Math.round(height * 3.375)} height={height} style={{ height, width: "auto" }} />
+      </a>
+    </div>
+  );
+}
 
 function Nav() {
   return (
@@ -18,13 +31,11 @@ function Nav() {
       <div className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
         <Image src="/tallo-logo-tagline.svg" alt="Tallo Smarter Shopping" width={160} height={48} priority />
         <a
-          href={TESTFLIGHT_URL}
-          target="_blank"
-          rel="noopener noreferrer"
+          href="#download"
           className="text-sm font-semibold px-4 py-2 rounded-full transition-opacity hover:opacity-80"
           style={{ background: "var(--black)", color: "var(--bg)" }}
         >
-          Try on iOS
+          Get the app
         </a>
       </div>
     </header>
@@ -103,7 +114,7 @@ function Hero() {
               style={{ background: "#E8F5EE", color: "#2A8A50" }}
             >
               <span className="w-1.5 h-1.5 rounded-full" style={{ background: "#2A8A50" }} />
-              Now live on iOS TestFlight
+              Now live on iOS and Android
             </div>
             <h1
               className="text-4xl md:text-5xl font-bold leading-none mb-6"
@@ -116,31 +127,9 @@ function Hero() {
               Tallo compares 20,000+ products across Coles, Woolworths and Aldi, plus beer, wine and spirits across Dan Murphy&apos;s, Liquorland and BWS. Independent, unsponsored and your data stays on your device.
             </p>
             <div className="flex flex-col gap-4">
-              <div className="flex items-center gap-3 flex-wrap">
-                <a
-                  href={TESTFLIGHT_URL}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2.5 px-5 py-3 rounded-full text-sm font-semibold transition-opacity hover:opacity-85"
-                  style={{ background: "var(--black)", color: "#fff" }}
-                >
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
-                    <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z" />
-                  </svg>
-                  Download on TestFlight
-                </a>
-                <div
-                  className="inline-flex items-center gap-2.5 px-5 py-3 rounded-full text-sm font-semibold select-none"
-                  style={{ background: "#E8F5EE", color: "#5DAA7A", cursor: "default" }}
-                >
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
-                    <path d="M17.523 15.341A6.979 6.979 0 0 0 19 11a7 7 0 0 0-7-7 7 7 0 0 0-7 7 6.98 6.98 0 0 0 1.477 4.341L4 19h16l-2.477-3.659zM7.5 11a1.5 1.5 0 1 1 3 0 1.5 1.5 0 0 1-3 0zm6 0a1.5 1.5 0 1 1 3 0 1.5 1.5 0 0 1-3 0z" />
-                  </svg>
-                  Android, coming soon
-                </div>
-              </div>
+              <StoreBadges />
               <p className="text-xs" style={{ color: "var(--muted)" }}>
-                Free to join, no invite code needed
+                Free to download on the App Store and Google Play
               </p>
             </div>
           </div>
@@ -372,34 +361,15 @@ function Download() {
             Get Tallo
           </p>
           <h2 className="text-4xl md:text-5xl font-bold mb-4" style={{ letterSpacing: "-0.04em", color: "#fff" }}>
-            Available now on iOS.
+            Available now on iOS and Android.
           </h2>
           <p className="text-lg mb-10 max-w-lg mx-auto" style={{ color: "rgba(255,255,255,0.5)" }}>
-            Join the public beta on TestFlight. Free to download, no invite code needed.
+            Free to download on the App Store and Google Play. No invite code needed.
           </p>
 
-          <a
-            href={TESTFLIGHT_URL}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-3 px-8 py-4 rounded-full text-base font-semibold transition-opacity hover:opacity-90 mb-16"
-            style={{ background: "#fff", color: "var(--black)" }}
-          >
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-              <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z" />
-            </svg>
-            Download on TestFlight
-          </a>
-
-          <div className="flex items-center gap-4 max-w-sm mx-auto mb-10">
-            <div className="flex-1 h-px" style={{ background: "rgba(255,255,255,0.1)" }} />
-            <span className="text-xs font-semibold uppercase tracking-wider" style={{ color: "rgba(255,255,255,0.25)" }}>
-              Android waitlist
-            </span>
-            <div className="flex-1 h-px" style={{ background: "rgba(255,255,255,0.1)" }} />
+          <div className="flex justify-center">
+            <StoreBadges height={56} />
           </div>
-
-          <WaitlistForm />
         </div>
       </div>
     </section>

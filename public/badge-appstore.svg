@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 40" role="img" aria-label="Download on the App Store">
+  <rect x="0.5" y="0.5" width="119" height="39" rx="8.5" fill="#000000" stroke="#A6A6A6" stroke-width="1"/>
+  <g fill="#FFFFFF">
+    <path d="M24.77 20.3c-.02-2.02 1.65-2.99 1.72-3.04-.94-1.37-2.4-1.56-2.92-1.58-1.24-.13-2.42.73-3.05.73-.63 0-1.6-.72-2.63-.7-1.35.02-2.6.79-3.29 2-1.41 2.44-.36 6.05 1 8.03.67.97 1.47 2.06 2.51 2.02 1.01-.04 1.39-.65 2.61-.65 1.21 0 1.56.65 2.62.63 1.08-.02 1.77-.99 2.43-1.96.77-1.12 1.09-2.21 1.11-2.27-.02-.01-2.12-.81-2.14-3.24z"/>
+    <path d="M22.77 14.37c.55-.67.93-1.6.83-2.53-.8.03-1.79.53-2.36 1.19-.51.58-.96 1.53-.84 2.42.9.07 1.81-.45 2.37-1.08z"/>
+  </g>
+  <g fill="#FFFFFF">
+    <text x="34" y="16" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="6.5" letter-spacing="0.2">Download on the</text>
+    <text x="33.5" y="30" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="15" font-weight="600" letter-spacing="-0.4">App Store</text>
+  </g>
+</svg>
