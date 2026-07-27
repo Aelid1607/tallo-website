@@ -14,6 +14,7 @@ export const GOOGLE_PLAY_URL =
 export const FACEBOOK_URL =
   "https://www.facebook.com/profile.php?id=61591547923897";
 export const X_URL = "https://x.com/bhevers";
+export const GA_MEASUREMENT_ID = "G-BMR0CXJSZB";
 
 const SOCIAL_IMAGE = {
   url: "/og.png",

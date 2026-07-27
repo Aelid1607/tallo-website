@@ -1,5 +1,12 @@
 import type { Metadata } from "next";
-import { HOME_DESCRIPTION, HOME_TITLE, SITE_URL } from "@/app/lib/site";
+import Script from "next/script";
+import {
+  GA_MEASUREMENT_ID,
+  HOME_DESCRIPTION,
+  HOME_TITLE,
+  SITE_URL,
+} from "@/app/lib/site";
+import { DownloadEvents } from "@/app/components/DownloadEvents";
 import "./globals.css";
 import "./marketing-pages.css";
 
@@ -37,7 +44,26 @@ export default function RootLayout({
       className="h-full antialiased"
       data-scroll-behavior="smooth"
     >
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body className="min-h-full flex flex-col">
+        {children}
+        {process.env.NODE_ENV === "production" && (
+          <>
+            <Script
+              src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`}
+              strategy="afterInteractive"
+            />
+            <Script id="ga4-init" strategy="afterInteractive">
+              {`
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){dataLayer.push(arguments);}
+                gtag('js', new Date());
+                gtag('config', '${GA_MEASUREMENT_ID}');
+              `}
+            </Script>
+            <DownloadEvents />
+          </>
+        )}
+      </body>
     </html>
   );
 }
