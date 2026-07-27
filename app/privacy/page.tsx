@@ -1,11 +1,13 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
+import { createPageMetadata } from "@/app/lib/site";
 
-export const metadata: Metadata = {
-  title: "Privacy Policy: Tallo",
+export const metadata: Metadata = createPageMetadata({
+  title: "Privacy Policy",
   description: "How Tallo collects, uses, and protects your personal information.",
-};
+  path: "/privacy",
+});
 
 export default function PrivacyPage() {
   return (

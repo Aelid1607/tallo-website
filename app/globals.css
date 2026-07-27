@@ -95,7 +95,8 @@ a {
 
 .nav-cta {
   padding: 10px 14px 10px 18px;
-  background: var(--lime);
+  background: var(--blue);
+  color: #fff;
   border-radius: 999px;
 }
 
@@ -186,7 +187,7 @@ h3 {
 h1 {
   max-width: 620px;
   margin-bottom: 25px;
-  font-size: clamp(52px, 6vw, 84px);
+  font-size: clamp(42px, 5.8vw, 72px);
   line-height: .93;
   font-weight: 800;
 }
@@ -1178,6 +1179,197 @@ h2 {
 }
 
 /* ==========================================================================
+   Fuel
+   ========================================================================== */
+.fuel-section {
+  overflow: hidden;
+  padding-top: 88px;
+  padding-bottom: 124px;
+  background: #dcecf1;
+}
+
+.fuel-inner {
+  position: relative;
+  width: min(1180px, 100%);
+  min-height: 570px;
+  padding: 82px 8%;
+  margin: auto;
+  overflow: hidden;
+  border-radius: 28px;
+  background: #0d252e;
+  color: #fff;
+}
+
+.fuel-inner::before,
+.fuel-inner::after {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.fuel-inner::before {
+  width: 570px;
+  height: 570px;
+  top: -295px;
+  right: -80px;
+  background: #0c8db2;
+  opacity: .6;
+}
+
+.fuel-inner::after {
+  width: 330px;
+  height: 330px;
+  right: 26%;
+  bottom: -260px;
+  background: #6de0b4;
+  opacity: .35;
+}
+
+.fuel-copy {
+  position: relative;
+  z-index: 2;
+  max-width: 480px;
+}
+
+.fuel-copy .eyebrow {
+  color: #7ce6cb;
+}
+
+.fuel-copy h2 {
+  margin-bottom: 24px;
+}
+
+.fuel-copy h2 em {
+  color: #7ce6cb;
+}
+
+.fuel-copy > p:not(.eyebrow) {
+  max-width: 455px;
+  color: #bfd0d5;
+  font-size: 16px;
+  line-height: 1.58;
+}
+
+.fuel-list {
+  margin-top: 28px;
+  color: #effcf8;
+}
+
+.fuel-list .check {
+  color: #0d252e;
+  background: #7ce6cb;
+}
+
+.fuel-phones {
+  position: absolute;
+  z-index: 2;
+  right: 5%;
+  bottom: -125px;
+  display: flex;
+  align-items: end;
+  gap: 14px;
+}
+
+.fuel-phone-list {
+  transform: rotate(-7deg) translateY(42px);
+}
+
+.fuel-phone-map {
+  transform: rotate(7deg);
+}
+
+/* ===========================================================================
+   Recipe import
+   ========================================================================== */
+.recipe-import-section {
+  overflow: hidden;
+  padding-top: 126px;
+  padding-bottom: 126px;
+  background: #f0eff1;
+}
+
+.recipe-import-inner {
+  position: relative;
+  width: min(1180px, 100%);
+  min-height: 600px;
+  display: grid;
+  grid-template-columns: 1.05fr .95fr;
+  align-items: center;
+  gap: 48px;
+  padding: 70px 7%;
+  margin: auto;
+  overflow: hidden;
+  border-radius: 28px;
+  background: #e2efff;
+}
+
+.recipe-import-inner::before {
+  content: "";
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  right: -180px;
+  top: -230px;
+  border-radius: 50%;
+  background: #bcd9ff;
+}
+
+.recipe-import-copy {
+  position: relative;
+  z-index: 2;
+}
+
+.recipe-import-copy h2 {
+  margin-bottom: 24px;
+}
+
+.recipe-import-copy > p:not(.eyebrow) {
+  max-width: 465px;
+  color: #59636e;
+  font-size: 16px;
+  line-height: 1.58;
+}
+
+.recipe-import-copy > p:not(.eyebrow) + p {
+  margin-top: 16px;
+}
+
+.recipe-import-list {
+  margin-top: 26px;
+  color: #282b30;
+}
+
+.recipe-import-phones {
+  position: relative;
+  z-index: 2;
+  height: 470px;
+}
+
+.recipe-import-phones > div {
+  position: absolute;
+  bottom: -100px;
+}
+
+.recipe-import-start {
+  z-index: 2;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.recipe-import-cookbook {
+  z-index: 1;
+  left: -3%;
+  transform: rotate(-10deg) translateY(18px);
+}
+
+.recipe-import-detail {
+  z-index: 3;
+  right: -2%;
+  transform: rotate(10deg) translateY(26px);
+}
+
+/* ==========================================================================
    Responsive - tablet
    ========================================================================== */
 @media (max-width: 900px) {
@@ -1698,5 +1890,111 @@ h2 {
 
   .site-footer > span {
     text-align: left;
+  }
+}
+
+/* ===========================================================================
+   Fuel and recipe import responsive layout
+   ========================================================================== */
+@media (max-width: 900px) {
+  .fuel-inner {
+    min-height: 680px;
+    padding: 62px 8%;
+  }
+
+  .fuel-copy {
+    max-width: 52%;
+  }
+
+  .fuel-phones {
+    right: -2%;
+  }
+
+  .recipe-import-inner {
+    min-height: 730px;
+    grid-template-columns: 1fr;
+    padding: 66px 8%;
+  }
+
+  .recipe-import-copy {
+    max-width: 58%;
+  }
+
+  .recipe-import-phones {
+    position: absolute;
+    right: 2%;
+    bottom: -75px;
+    width: 50%;
+  }
+}
+
+@media (max-width: 620px) {
+  .fuel-section,
+  .recipe-import-section {
+    padding: 66px 18px;
+  }
+
+  .fuel-inner {
+    min-height: 700px;
+    padding: 48px 28px;
+  }
+
+  .fuel-copy {
+    max-width: 100%;
+  }
+
+  .fuel-copy > p:not(.eyebrow),
+  .recipe-import-copy > p:not(.eyebrow) {
+    font-size: 15px;
+  }
+
+  .fuel-phones {
+    right: auto;
+    left: 9%;
+    bottom: -127px;
+    gap: 8px;
+  }
+
+  .fuel-phones .phone-regular {
+    width: 164px;
+  }
+
+  .recipe-import-inner {
+    min-height: 940px;
+    display: block;
+    padding: 48px 28px;
+  }
+
+  .recipe-import-copy {
+    max-width: 100%;
+  }
+
+  .recipe-import-phones {
+    position: relative;
+    right: auto;
+    bottom: auto;
+    width: auto;
+    height: 340px;
+    margin: 12px -28px 0;
+  }
+
+  .recipe-import-phones > div {
+    bottom: -48px;
+  }
+
+  .recipe-import-start .phone-regular {
+    width: 183px;
+  }
+
+  .recipe-import-cookbook {
+    left: 2%;
+  }
+
+  .recipe-import-detail {
+    right: 2%;
+  }
+
+  .recipe-import-phones .phone-small {
+    width: 118px;
   }
 }

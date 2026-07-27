@@ -1,0 +1,132 @@
+{
+  "edition": {
+    "label": "22–28 July 2026",
+    "publishedAt": "2026-07-27",
+    "updatedAt": "2026-07-27",
+    "dataCheckedAt": "2026-07-22",
+    "validFrom": "2026-07-22",
+    "validTo": "2026-07-28",
+    "scope": "Australia-wide guide. Store, state and location differences may apply."
+  },
+  "groceryDeals": {
+    "coles": [
+      {
+        "name": "White King In Bowl Toilet Power Clean Citrus Burst",
+        "size": "2 pack",
+        "category": "Cleaning & Laundry",
+        "price": 4,
+        "wasPrice": 10,
+        "sourceUrl": "https://www.coles.com.au/product/1140016"
+      },
+      {
+        "name": "Tip Top English Muffins Multigrain",
+        "size": "400g",
+        "category": "Bakery",
+        "price": 3.2,
+        "wasPrice": 6.4,
+        "sourceUrl": "https://www.coles.com.au/product/293099"
+      },
+      {
+        "name": "Nuttelex Cholesterol Lowering Spread",
+        "size": "500g",
+        "category": "Dairy, Eggs & Fridge",
+        "price": 4.95,
+        "wasPrice": 9.9,
+        "sourceUrl": "https://www.coles.com.au/product/1155920"
+      },
+      {
+        "name": "Gatorade Lemon & Lime Sports Drink",
+        "size": "1L",
+        "category": "Drinks",
+        "price": 2.8,
+        "wasPrice": 5.6,
+        "sourceUrl": "https://www.coles.com.au/product/2484928"
+      },
+      {
+        "name": "Bella Raspberry & Mascarpone Gelato",
+        "size": "500mL",
+        "category": "Frozen",
+        "price": 6.75,
+        "wasPrice": 13.5,
+        "sourceUrl": "https://www.coles.com.au/product/1402983"
+      }
+    ],
+    "woolworths": [
+      {
+        "name": "Coca-Cola Classic Soft Drink Cans",
+        "size": "375mL × 10 pack",
+        "category": "Drinks",
+        "price": 10.5,
+        "wasPrice": 21,
+        "sourceUrl": "https://www.woolworths.com.au/shop/productdetails/793315/coca-cola-classic-soft-drink-cans"
+      },
+      {
+        "name": "Huggies Skin Protect Nappies Size 2",
+        "size": "48 pack",
+        "category": "Baby",
+        "price": 12,
+        "wasPrice": 24,
+        "sourceUrl": "https://www.woolworths.com.au/shop/productdetails/673363/huggies-skin-protect-nappies-size-2-4-8kg-"
+      },
+      {
+        "name": "Latina Fresh Beef Ravioli Pasta",
+        "size": "625g",
+        "category": "Dairy, Eggs & Fridge",
+        "price": 5.5,
+        "wasPrice": 11,
+        "sourceUrl": "https://www.woolworths.com.au/shop/productdetails/54267/latina-fresh-beef-ravioli-pasta-ravioli"
+      },
+      {
+        "name": "Connoisseur Vanilla Caramel Brownie Ice Cream",
+        "size": "1L",
+        "category": "Frozen",
+        "price": 6.5,
+        "wasPrice": 13,
+        "sourceUrl": "https://www.woolworths.com.au/shop/productdetails/699140/connoisseur-ice-cream-vanilla-caramel-brownie"
+      },
+      {
+        "name": "Woolworths Slow Cooked Lamb Shoulder on the Bone",
+        "size": "1.1–1.8kg",
+        "category": "Meat & Seafood",
+        "price": 28,
+        "wasPrice": 56,
+        "sourceUrl": "https://www.woolworths.com.au/shop/productdetails/6035986/woolworths-lamb-shoulder-on-the-bone-slow-cooked"
+      }
+    ],
+    "aldi": []
+  },
+  "liquorDeals": [
+    {
+      "store": "BWS",
+      "name": "Marlborough Sounds Pinot Noir",
+      "size": "750mL",
+      "category": "Wine",
+      "price": 14,
+      "wasPrice": 26,
+      "sourceUrl": "https://www.bws.com.au/product/478357/marlborough-sounds-pinot-noir"
+    },
+    {
+      "store": "Liquorland",
+      "name": "Nepenthe Ascend Blanc De Blanc",
+      "size": "750mL",
+      "category": "Wine",
+      "price": 17,
+      "wasPrice": 34,
+      "sourceUrl": "https://www.coles.com.au/product/6208922"
+    },
+    {
+      "store": "Dan Murphy's",
+      "name": "Truffle Mad Gin",
+      "size": "Single",
+      "category": "Spirits",
+      "price": 50,
+      "wasPrice": 99.99,
+      "sourceUrl": "https://www.danmurphys.com.au/product/191186"
+    }
+  ],
+  "notes": {
+    "aldi": "The current Tallo catalogue export contains Aldi everyday prices, but no Aldi products are marked as weekly specials for this edition. We have not substituted regular prices or invented catalogue offers.",
+    "liquor": "Liquor prices and availability can vary by state, store and location. Check the price shown for your area before buying. For adults 18+ only.",
+    "methodology": "Tallo reviewed products marked as on special in its weekly catalogue refresh, removed unavailable and invalid entries, then selected a useful mix of household categories. This is an editorial shortlist, not every special in the app."
+  }
+}

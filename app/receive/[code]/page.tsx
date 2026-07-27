@@ -1,13 +1,16 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
+import { createPageMetadata } from "@/app/lib/site";
 
 const TESTFLIGHT_URL = "https://testflight.apple.com/join/4VfPe7z1";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = createPageMetadata({
   title: "Open in Tallo",
   description: "Download Tallo to import this shared shopping list.",
-};
+  index: false,
+  follow: false,
+});
 
 export default function ReceivePage() {
   return (

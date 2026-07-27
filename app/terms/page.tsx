@@ -1,11 +1,13 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
+import { createPageMetadata } from "@/app/lib/site";
 
-export const metadata: Metadata = {
-  title: "Terms & Conditions: Tallo",
+export const metadata: Metadata = createPageMetadata({
+  title: "Terms and Conditions",
   description: "The terms and conditions governing your use of the Tallo app.",
-};
+  path: "/terms",
+});
 
 export default function TermsPage() {
   return (

@@ -1,11 +1,13 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
+import { createPageMetadata } from "@/app/lib/site";
 
-export const metadata: Metadata = {
-  title: "Delete Your Account: Tallo",
+export const metadata: Metadata = createPageMetadata({
+  title: "Delete Your Account",
   description: "How to delete your Tallo account and what data is removed.",
-};
+  path: "/delete-account",
+});
 
 export default function DeleteAccountPage() {
   return (

@@ -1,25 +1,24 @@
 import type { Metadata } from "next";
+import { HOME_DESCRIPTION, HOME_TITLE, SITE_URL } from "@/app/lib/site";
 import "./globals.css";
+import "./marketing-pages.css";
 
 export const metadata: Metadata = {
-  title: "Tallo:Smarter Grocery Shopping",
-  description:
-    "Compare grocery prices across Coles, Woolworths, and Aldi. Know what your shop costs before you leave the house.",
-  metadataBase: new URL("https://talloapp.com.au"),
-  openGraph: {
-    title: "Tallo:Smarter Grocery Shopping",
-    description:
-      "Compare grocery prices across Coles, Woolworths, and Aldi. Know what your shop costs before you leave the house.",
-    url: "https://talloapp.com.au",
-    siteName: "Tallo",
-    locale: "en_AU",
-    type: "website",
+  metadataBase: new URL(SITE_URL),
+  title: {
+    default: HOME_TITLE,
+    template: "%s | Tallo",
   },
-  twitter: {
-    card: "summary_large_image",
-    title: "Tallo:Smarter Grocery Shopping",
-    description:
-      "Compare grocery prices across Coles, Woolworths, and Aldi. Know what your shop costs before you leave the house.",
+  description: HOME_DESCRIPTION,
+  applicationName: "Tallo",
+  category: "shopping",
+  appleWebApp: {
+    capable: true,
+    title: "Tallo",
+    statusBarStyle: "default",
+  },
+  itunes: {
+    appId: "6783832613",
   },
   robots: {
     index: true,
@@ -33,7 +32,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en-AU" className="h-full antialiased">
+    <html
+      lang="en-AU"
+      className="h-full antialiased"
+      data-scroll-behavior="smooth"
+    >
       <body className="min-h-full flex flex-col">{children}</body>
     </html>
   );

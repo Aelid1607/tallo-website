@@ -1,30 +1,48 @@
+import type { Metadata } from "next";
 import Image from "next/image";
-import Link from "next/link";
+import {
+  Arrow,
+  MarketingFooter,
+  MarketingNav,
+  StoreBadges,
+} from "@/app/components/MarketingChrome";
+import { JsonLd } from "@/app/components/JsonLd";
+import { Phone } from "@/app/components/Phone";
+import { StoreRail } from "@/app/components/StoreRail";
+import {
+  APP_STORE_URL,
+  createPageMetadata,
+  GOOGLE_PLAY_URL,
+  HOME_DESCRIPTION,
+  HOME_TITLE,
+  SITE_URL,
+} from "@/app/lib/site";
 
-const APP_STORE_URL = "https://apps.apple.com/au/app/id6783832613";
-const GOOGLE_PLAY_URL = "https://play.google.com/store/apps/details?id=au.com.talloapp";
+export const metadata: Metadata = createPageMetadata({
+  title: HOME_TITLE,
+  description: HOME_DESCRIPTION,
+  path: "/",
+});
 
-function StoreBadges({ height = 48 }: { height?: number }) {
-  return (
-    <div className="store-badges">
-      <a href={APP_STORE_URL} target="_blank" rel="noopener noreferrer" aria-label="Download Tallo on the App Store">
-        <Image src="/badge-appstore.svg" alt="Download on the App Store" width={Math.round(height * 3)} height={height} style={{ height, width: "auto" }} />
-      </a>
-      <a href={GOOGLE_PLAY_URL} target="_blank" rel="noopener noreferrer" aria-label="Get Tallo on Google Play">
-        <Image src="/badge-googleplay.svg" alt="Get it on Google Play" width={Math.round(height * 3.375)} height={height} style={{ height, width: "auto" }} />
-      </a>
-    </div>
-  );
-}
-
-function Arrow({ dark = false }: { dark?: boolean }) {
-  return (
-    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke={dark ? "#101113" : "currentColor"} strokeWidth="2.25" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-      <path d="M5 12h14" />
-      <path d="m13 6 6 6-6 6" />
-    </svg>
-  );
-}
+const appJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "MobileApplication",
+  name: "Tallo",
+  description: HOME_DESCRIPTION,
+  url: SITE_URL,
+  image: `${SITE_URL}/og.png`,
+  applicationCategory: "ShoppingApplication",
+  operatingSystem: "iOS, Android",
+  downloadUrl: [APP_STORE_URL, GOOGLE_PLAY_URL],
+  featureList: [
+    "Compare grocery prices across Coles, Woolworths and Aldi",
+    "Compare liquor prices across BWS, Dan Murphy's and Liquorland",
+    "Build and share shopping lists",
+    "Compare nearby fuel prices",
+    "Plan meals and import recipes",
+    "Scan product barcodes",
+  ],
+};
 
 function Check() {
   return (
@@ -34,41 +52,14 @@ function Check() {
   );
 }
 
-function Phone({ src, alt, size = "regular", device = "ios", priority = false }: { src: string; alt: string; size?: "small" | "regular" | "hero"; device?: "ios" | "android"; priority?: boolean }) {
-  return (
-    <div className={`phone phone-${size} phone-${device}`}>
-      <div className="phone-notch" />
-      <div className="phone-screen">
-        <Image src={src} alt={alt} width={1206} height={2622} priority={priority} sizes="(max-width: 700px) 70vw, 420px" />
-      </div>
-    </div>
-  );
-}
-
-function Nav() {
-  return (
-    <header className="site-nav">
-      <div className="nav-inner">
-        <a href="#top" aria-label="Tallo home"><Image src="/tallo-logo-tagline.svg" alt="Tallo Smarter Shopping" width={148} height={45} priority /></a>
-        <nav aria-label="Primary navigation">
-          <a href="#compare">Compare</a>
-          <a href="#shop">My Shop</a>
-          <a href="#meals">Meals</a>
-        </nav>
-        <a className="nav-cta" href="#download">Get Tallo <Arrow dark /></a>
-      </div>
-    </header>
-  );
-}
-
 function Hero() {
   return (
     <section id="top" className="hero-section">
-      <div className="hero-glow hero-glow-one" />
-      <div className="hero-glow hero-glow-two" />
+      <div className="hero-glow hero-glow-one" aria-hidden="true" />
+      <div className="hero-glow hero-glow-two" aria-hidden="true" />
       <div className="hero-inner">
         <div className="hero-copy">
-          <h1>Prices for your whole shop, <em>in one place.</em></h1>
+          <h1>Compare grocery prices, <em>in one place.</em></h1>
           <p className="hero-lede">Tallo compares real prices across Coles, Woolworths and Aldi, plus BWS, Liquorland and Dan Murphy&apos;s. Build your list, see your best option and head out with a plan.</p>
           <div className="hero-actions">
             <StoreBadges height={52} />
@@ -78,32 +69,6 @@ function Hero() {
           <div className="hero-phone hero-phone-back"><Phone src="/screenshots/my-list.png" alt="Tallo saved shopping lists" size="small" priority /></div>
           <div className="hero-phone hero-phone-main"><Phone src="/screenshots/home-weekly-winner.png" alt="Tallo home screen showing this week&apos;s cheapest store" size="hero" priority /></div>
           <div className="hero-phone hero-phone-front"><Phone src="/screenshots/multishop.png" alt="Tallo multishop price split" size="small" device="android" priority /></div>
-        </div>
-      </div>
-    </section>
-  );
-}
-
-const STORES = [
-  { name: "Coles", src: "/stores/coles.png", w: 760, h: 227 },
-  { name: "Woolworths", src: "/stores/woolworths.png", w: 600, h: 150 },
-  { name: "Aldi", src: "/stores/aldi.jpg", w: 440, h: 293 },
-  { name: "Dan Murphy's", src: "/stores/danmurphys.png", w: 300, h: 140 },
-  { name: "Liquorland", src: "/stores/liquorland.jpg", w: 498, h: 115 },
-  { name: "BWS", src: "/stores/bws.png", w: 330, h: 126 },
-];
-
-function StoreRail() {
-  return (
-    <section className="store-rail" aria-label="Stores compared by Tallo">
-      <div className="store-rail-inner">
-        <p>One shop. A clearer picture.</p>
-        <div className="store-logos">
-          {STORES.map((s) => (
-            <div key={s.name} className={`store-logo-card logo-${s.name.toLowerCase().replace(/[^a-z]/g, "")}`}>
-              <Image src={s.src} alt={s.name} width={s.w} height={s.h} loading="eager" className="store-logo" />
-            </div>
-          ))}
         </div>
       </div>
     </section>
@@ -189,6 +154,29 @@ function Liquor() {
   );
 }
 
+function Fuel() {
+  return (
+    <section id="fuel" className="section fuel-section">
+      <div className="fuel-inner">
+        <div className="fuel-copy">
+          <p className="eyebrow">Fuel</p>
+          <h2>Local fuel prices,<br /><em>on a list or map.</em></h2>
+          <p>Choose a fuel type and distance to see nearby service stations and current prices. Switch between a list and map to find the location that suits your trip.</p>
+          <ul className="feature-list fuel-list">
+            <li><Check />View local stations and prices by fuel type</li>
+            <li><Check />Save favourite service stations to your profile</li>
+            <li><Check />Get directions when you are ready to go</li>
+          </ul>
+        </div>
+        <div className="fuel-phones">
+          <div className="fuel-phone-list"><Phone src="/screenshots/fuel-list.png" alt="Tallo Fuel list showing nearby E10 fuel prices" size="regular" /></div>
+          <div className="fuel-phone-map"><Phone src="/screenshots/fuel-map.png" alt="Tallo Fuel map showing nearby petrol stations" size="regular" /></div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
 function ListsAndScan() {
   return (
     <section className="section lists-section">
@@ -234,6 +222,31 @@ function Meals() {
   );
 }
 
+function RecipeImport() {
+  return (
+    <section className="section recipe-import-section">
+      <div className="recipe-import-inner">
+        <div className="recipe-import-phones" aria-label="Recipe import app screens">
+          <div className="recipe-import-cookbook"><Phone src="/screenshots/my-cookbook.png" alt="Tallo My Cookbook with imported recipes" size="small" /></div>
+          <div className="recipe-import-start"><Phone src="/screenshots/recipe-import.png" alt="Tallo screen for importing a recipe link" size="regular" /></div>
+          <div className="recipe-import-detail"><Phone src="/screenshots/imported-recipe.png" alt="Tallo imported recipe showing matched ingredients and totals" size="small" /></div>
+        </div>
+        <div className="recipe-import-copy">
+          <p className="eyebrow">Recipe import</p>
+          <h2>Bring your favourite<br />recipes <em>with you.</em></h2>
+          <p>Paste a recipe link and Tallo imports the recipe, ingredients and method. Each ingredient is matched to available products and the total is shown at the bottom of the recipe.</p>
+          <p>It also works from social posts and videos. Share a recipe from Instagram, Facebook, Pinterest or a Reel to Tallo and it can be imported from the shared link.</p>
+          <ul className="feature-list recipe-import-list">
+            <li><Check />Imported ingredients matched to store products</li>
+            <li><Check />Method, serves and recipe total kept together</li>
+            <li><Check />Save imported recipes to your own cookbook</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  );
+}
+
 function Trust() {
   const items = [
     ["Savings that add up", "Completed shops are saved to your profile so Tallo can calculate and log the savings you make over time."],
@@ -258,23 +271,32 @@ function Download() {
         <Image src="/tallo-logo-white.svg" alt="Tallo" width={200} height={60} className="download-logo" />
         <p className="eyebrow">Available now</p>
         <h2>Tallo for your<br /><em>next shop.</em></h2>
-        <p>Download Tallo free for grocery and liquor price comparison, lists, meal planning and more.</p>
+        <p>Download Tallo and compare grocery and liquor prices, plan meals, build lists and more.</p>
         <StoreBadges height={54} />
       </div>
     </section>
   );
 }
 
-function Footer() {
-  return (
-    <footer className="site-footer">
-      <Image src="/tallo-logo-light.svg" alt="Tallo" width={132} height={38} />
-      <div><a href="mailto:info@talloapp.com.au">Get in touch</a><Link href="/privacy">Privacy</Link><Link href="/terms">Terms</Link></div>
-      <span>© {new Date().getFullYear()} Tallo. Australia.</span>
-    </footer>
-  );
-}
-
 export default function Home() {
-  return <><Nav /><main><Hero /><StoreRail /><Compare /><Shop /><Liquor /><ListsAndScan /><Meals /><Trust /><Download /></main><Footer /></>;
+  return (
+    <>
+      <JsonLd data={appJsonLd} />
+      <MarketingNav />
+      <main>
+        <Hero />
+        <StoreRail />
+        <Compare />
+        <Shop />
+        <Liquor />
+        <Fuel />
+        <ListsAndScan />
+        <Meals />
+        <RecipeImport />
+        <Trust />
+        <Download />
+      </main>
+      <MarketingFooter />
+    </>
+  );
 }
