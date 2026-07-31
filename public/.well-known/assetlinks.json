@@ -1,0 +1,12 @@
+[
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "au.com.talloapp",
+      "sha256_cert_fingerprints": [
+        "72:A6:74:39:CD:36:5C:D5:4A:2A:3D:C3:3F:08:9B:E8:01:3E:73:AC:10:2F:60:43:04:C3:36:EB:96:4C:13:02"
+      ]
+    }
+  }
+]
