@@ -77,7 +77,7 @@ export default function DownloadPage() {
           <div className="download-orbit download-orbit-one" />
           <div className="download-orbit download-orbit-two" />
           <Phone
-            src="/screenshots/home-weekly-winner.png"
+            src="/screenshots/iphone17/IMG_1586.PNG"
             alt=""
             size="hero"
             priority

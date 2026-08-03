@@ -51,19 +51,19 @@ const mediaAssets = [
 const screenshotAssets = [
   {
     title: "Grocery price comparison",
-    src: "/screenshots/price-comparison.png",
+    src: "/screenshots/iphone17/IMG_1586.PNG",
     width: 1206,
     height: 2622,
   },
   {
     title: "My Shop and store totals",
-    src: "/screenshots/my-shop.png",
+    src: "/screenshots/iphone17/IMG_1585.PNG",
     width: 1206,
     height: 2622,
   },
   {
     title: "Multi-shop",
-    src: "/screenshots/multishop.png",
+    src: "/screenshots/iphone17/IMG_1586.PNG",
     width: 1320,
     height: 2700,
   },

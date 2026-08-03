@@ -89,7 +89,7 @@ export default function FeaturesPage() {
               </div>
               <div className="feature-showcase-phone">
                 <Phone
-                  src="/screenshots/home-weekly-winner.png"
+                  src="/screenshots/iphone17/IMG_1586.PNG"
                   alt="Tallo showing the weekly price winner across supermarkets"
                   size="regular"
                 />
@@ -108,7 +108,7 @@ export default function FeaturesPage() {
               </div>
               <div className="feature-showcase-phone">
                 <Phone
-                  src="/screenshots/my-shop.png"
+                  src="/screenshots/iphone17/IMG_1585.PNG"
                   alt="My Shop in Tallo with a grocery list and store totals"
                   size="regular"
                 />

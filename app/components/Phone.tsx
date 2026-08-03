@@ -8,6 +8,12 @@ type PhoneProps = {
   priority?: boolean;
 };
 
+const screenshotsNeedingDynamicIsland = new Set([
+  "/screenshots/liquor-home.png",
+  "/screenshots/meal-planner.png",
+  "/screenshots/recipe-detail.png",
+]);
+
 export function Phone({
   src,
   alt,
@@ -15,9 +21,21 @@ export function Phone({
   device = "ios",
   priority = false,
 }: PhoneProps) {
+  const needsDynamicIsland =
+    src.startsWith("/screenshots/iphone17/") ||
+    screenshotsNeedingDynamicIsland.has(src);
+
   return (
     <div className={`phone phone-${size} phone-${device}`}>
-      <div className="phone-notch" aria-hidden="true" />
+      <Image
+        className="phone-hardware"
+        src="/devices/iphone17-lineup.avif"
+        alt=""
+        width={1665}
+        height={1080}
+        priority={priority}
+        aria-hidden="true"
+      />
       <div className="phone-screen">
         <Image
           src={src}
@@ -28,6 +46,7 @@ export function Phone({
           sizes="(max-width: 700px) 70vw, 420px"
         />
       </div>
+      {needsDynamicIsland ? <span className="phone-island" aria-hidden="true" /> : null}
     </div>
   );
 }

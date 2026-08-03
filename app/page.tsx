@@ -66,9 +66,9 @@ function Hero() {
           </div>
         </div>
         <div className="hero-phones" aria-label="Tallo app screens">
-          <div className="hero-phone hero-phone-back"><Phone src="/screenshots/my-list.png" alt="Tallo saved shopping lists" size="small" priority /></div>
-          <div className="hero-phone hero-phone-main"><Phone src="/screenshots/home-weekly-winner.png" alt="Tallo home screen showing this week&apos;s cheapest store" size="hero" priority /></div>
-          <div className="hero-phone hero-phone-front"><Phone src="/screenshots/multishop.png" alt="Tallo multishop price split" size="small" device="android" priority /></div>
+          <div className="hero-phone hero-phone-back"><Phone src="/screenshots/iphone17/IMG_1594.PNG" alt="Tallo weekly shopping list" size="small" priority /></div>
+          <div className="hero-phone hero-phone-main"><Phone src="/screenshots/iphone17/IMG_1585.PNG" alt="Tallo My Shop comparing grocery totals" size="hero" priority /></div>
+          <div className="hero-phone hero-phone-front"><Phone src="/screenshots/iphone17/IMG_1586.PNG" alt="Tallo multishop price split" size="small" priority /></div>
         </div>
       </div>
     </section>
@@ -96,7 +96,7 @@ function Compare() {
           </ul>
         </article>
         <article className="comparison-card comparison-phone-card">
-          <Phone src="/screenshots/home-winner.png" alt="Tallo home screen showing this week&apos;s cheapest store" size="regular" />
+          <Phone src="/screenshots/iphone17/IMG_1590.PNG" alt="Tallo grocery search comparing current prices" size="regular" />
         </article>
         <article className="comparison-card comparison-quote-card">
           <span className="quote-mark">+</span>
@@ -124,8 +124,8 @@ function Shop() {
           </ul>
         </div>
         <div className="shop-phones">
-          <div className="shop-phone-one"><Phone src="/screenshots/my-shop.png" alt="Tallo My Shop showing store totals" size="regular" /></div>
-          <div className="shop-phone-two"><Phone src="/screenshots/multishop.png" alt="Tallo Multi-shop view with best price split" size="regular" device="android" /></div>
+          <div className="shop-phone-one"><Phone src="/screenshots/iphone17/IMG_1585.PNG" alt="Tallo My Shop showing store totals" size="regular" /></div>
+          <div className="shop-phone-two"><Phone src="/screenshots/iphone17/IMG_1595.PNG" alt="Tallo in-store shopping mode with a running total" size="regular" /></div>
         </div>
       </div>
     </section>
@@ -184,7 +184,7 @@ function ListsAndScan() {
         <div><p className="eyebrow">Lists, shared</p><h2>Your regular products,<br />ready when you need them.</h2></div>
       </div>
       <div className="lists-grid">
-        <article className="list-card list-card-phone"><Phone src="/screenshots/my-list.png" alt="Tallo custom list with current store prices" size="regular" /></article>
+        <article className="list-card list-card-phone"><Phone src="/screenshots/iphone17/IMG_1594.PNG" alt="Tallo weekly shopping list with current store totals" size="regular" /></article>
         <article className="list-card list-card-copy">
           <h3>Send the list. Keep the plan.</h3>
           <p>Each saved list carries its store prices with it, so it is useful whether you are organising the week or handing the shop to someone else.</p>
@@ -192,7 +192,7 @@ function ListsAndScan() {
         </article>
         <article className="list-card scan-card">
           <div><p className="eyebrow">Scan and discover</p><h3>Scan products from the pantry.</h3><p>Scan a barcode to add a product to a custom list or straight to My Shop. If Tallo cannot find it, you can add it to the database.</p></div>
-          <Phone src="/screenshots/search.png" alt="Tallo product search with barcode scanner" size="small" device="android" />
+          <Phone src="/screenshots/iphone17/IMG_1590.PNG" alt="Tallo grocery search results with barcode scanner" size="small" />
         </article>
       </div>
     </section>
@@ -263,6 +263,28 @@ function Trust() {
   );
 }
 
+function SavingsProfile() {
+  return (
+    <section className="section savings-profile-section">
+      <div className="savings-profile-inner">
+        <div className="savings-profile-copy">
+          <p className="eyebrow">Savings and history</p>
+          <h2>See what every shop<br /><em>adds up to.</em></h2>
+          <p>Your profile keeps completed shops, items bought and total savings together. Favourite petrol stations and account tools stay close by too.</p>
+          <ul className="feature-list savings-profile-list">
+            <li><Check />Track total savings over time</li>
+            <li><Check />Revisit your recent completed shops</li>
+            <li><Check />Keep favourite petrol stations handy</li>
+          </ul>
+        </div>
+        <div className="savings-profile-visual">
+          <Phone src="/screenshots/iphone17/IMG_1592.PNG" alt="Tallo profile showing savings, recent shops and favourite petrol stations" size="regular" />
+        </div>
+      </div>
+    </section>
+  );
+}
+
 function Download() {
   return (
     <section id="download" className="download-section">
@@ -293,6 +315,7 @@ export default function Home() {
         <ListsAndScan />
         <Meals />
         <RecipeImport />
+        <SavingsProfile />
         <Trust />
         <Download />
       </main>

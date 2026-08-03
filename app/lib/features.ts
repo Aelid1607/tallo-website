@@ -54,7 +54,7 @@ export const features: FeatureRecord[] = [
     intro:
       "Search a product, browse a category or start with this week’s specials. Tallo brings the available prices into one view so you can compare the product you actually want without jumping between three retailer sites.",
     theme: "blue",
-    heroImage: "/screenshots/price-comparison.png",
+    heroImage: "/screenshots/iphone17/IMG_1586.PNG",
     heroAlt:
       "Tallo product price comparison showing grocery prices from supported supermarkets",
     facts: [
@@ -84,7 +84,7 @@ export const features: FeatureRecord[] = [
     ],
     showcases: [
       {
-        image: "/screenshots/home-specials.png",
+        image: "/screenshots/iphone17/IMG_1587.PNG",
         alt: "Weekly grocery specials in Tallo",
         eyebrow: "This week",
         title: "Current specials without the catalogue shuffle.",
@@ -92,7 +92,7 @@ export const features: FeatureRecord[] = [
           "Displayed grocery prices are refreshed weekly in line with new specials. Filter the offers, then compare the products that belong on your list.",
       },
       {
-        image: "/screenshots/product-detail.png",
+        image: "/screenshots/iphone17/IMG_1593.PNG",
         alt: "A grocery product detail screen in Tallo",
         eyebrow: "Product detail",
         title: "The price needs context.",
@@ -144,7 +144,7 @@ export const features: FeatureRecord[] = [
     intro:
       "My Shop turns a product list into a practical shopping plan. Compare individual store totals, review a Multi-shop split and then take a category-sorted list into the aisle.",
     theme: "dark",
-    heroImage: "/screenshots/my-shop.png",
+    heroImage: "/screenshots/iphone17/IMG_1585.PNG",
     heroAlt:
       "My Shop in Tallo showing a grocery list and supermarket totals",
     facts: [
@@ -174,7 +174,7 @@ export const features: FeatureRecord[] = [
     ],
     showcases: [
       {
-        image: "/screenshots/multishop.png",
+        image: "/screenshots/iphone17/IMG_1586.PNG",
         alt: "Tallo Multi-shop splitting a grocery list between supermarkets",
         eyebrow: "Multi-shop",
         title: "See when a sensible split costs less.",
@@ -182,7 +182,7 @@ export const features: FeatureRecord[] = [
           "Multi-shop assigns comparable items to the supported supermarket with the lower available price and shows the result beside the best single-store option.",
       },
       {
-        image: "/screenshots/shopping-list-v2.png",
+        image: "/screenshots/iphone17/IMG_1594.PNG",
         alt: "A category-sorted shopping list in Tallo",
         eyebrow: "In the aisle",
         title: "A list designed for the actual shop.",
@@ -445,7 +445,7 @@ export const features: FeatureRecord[] = [
     ],
     showcases: [
       {
-        image: "/screenshots/product-detail.png",
+        image: "/screenshots/iphone17/IMG_1593.PNG",
         alt: "A recognised grocery product in Tallo",
         eyebrow: "Recognised",
         title: "Move from barcode to useful product detail.",
@@ -453,7 +453,7 @@ export const features: FeatureRecord[] = [
           "A successful scan opens the same product information used elsewhere in Tallo, including available prices and list actions.",
       },
       {
-        image: "/screenshots/search.png",
+        image: "/screenshots/iphone17/IMG_1590.PNG",
         alt: "Product search results in Tallo",
         eyebrow: "Find an existing product",
         title: "Help connect a barcode without creating a duplicate.",

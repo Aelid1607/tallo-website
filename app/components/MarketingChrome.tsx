@@ -91,7 +91,7 @@ export function MarketingNav() {
             priority
           />
         </Link>
-        <nav aria-label="Primary navigation">
+        <nav className="desktop-nav" aria-label="Primary navigation">
           <Link href="/">Home</Link>
           <Link href="/about">About</Link>
           <Link href="/features">Features</Link>
@@ -103,6 +103,22 @@ export function MarketingNav() {
         <Link className="nav-cta" href="/download">
           Download Now <Arrow />
         </Link>
+        <details className="mobile-menu">
+          <summary aria-label="Open navigation menu">
+            <span aria-hidden="true" />
+            <span aria-hidden="true" />
+            <span aria-hidden="true" />
+          </summary>
+          <nav className="mobile-menu-panel" aria-label="Mobile navigation">
+            <Link href="/">Home</Link>
+            <Link href="/about">About</Link>
+            <Link href="/features">Features</Link>
+            <Link href="/features/myshop">My Shop</Link>
+            <Link href="/features/meal-planner">Meal Planner</Link>
+            <Link href="/blog">Blog</Link>
+            <Link href="/faq">FAQ</Link>
+          </nav>
+        </details>
       </div>
     </header>
   );
@@ -111,7 +127,12 @@ export function MarketingNav() {
 export function MarketingFooter() {
   return (
     <footer className="site-footer">
-      <Image src="/tallo-logo-light.svg" alt="Tallo" width={132} height={38} />
+      <Image
+        src="/tallo-logo-tagline.svg"
+        alt="Tallo Smarter Shopping"
+        width={144}
+        height={43}
+      />
       <div className="footer-links">
         <div className="footer-page-links">
           <Link href="/features">Features</Link>
