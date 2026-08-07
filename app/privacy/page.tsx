@@ -31,7 +31,7 @@ export default function PrivacyPage() {
             Privacy Policy
           </h1>
           <p className="text-sm" style={{ color: "var(--muted)" }}>
-            Last updated: 22 July 2026
+            Last updated: 7 August 2026
           </p>
         </div>
         <div className="prose-legal">
@@ -302,12 +302,48 @@ export default function PrivacyPage() {
 
           <Section title="12. Analytics and Tracking">
             <p>
-              Tallo does not use any third-party analytics services, advertising networks, or behavioural
-              tracking tools, and does not engage in cross-app or cross-website tracking. The limited
+              <strong>The App contains no analytics, advertising or tracking of any kind.</strong> The
+              Tallo App does not include any third-party analytics service, advertising network, tracking
+              pixel or behavioural tracking tool, and does not engage in cross-app tracking. The limited
               automated data collection in the App is confined to what is necessary to operate its features,
               such as the Firebase SDK diagnostic data described in clause 4.3(c), verification of your
               subscription status, and mapping. None of this information is used by Tallo for behavioural
-              profiling, advertising, or any analytical purpose.
+              profiling, advertising, or any analytical purpose. Your shopping lists, searches and browsing
+              inside the App are never used for advertising.
+            </p>
+            <p>
+              <strong>The Tallo website</strong> (talloapp.com.au) uses two third-party measurement tools:
+            </p>
+            <ul>
+              <li>
+                (a) <strong>Google Analytics 4</strong>, which helps Tallo understand aggregate website
+                traffic, such as which pages are visited and whether visitors tap through to the app
+                stores. You can opt out at{" "}
+                <a href="https://tools.google.com/dlpage/gaoptout" rel="noopener noreferrer">
+                  tools.google.com/dlpage/gaoptout
+                </a>
+                ; and
+              </li>
+              <li>
+                (b) the <strong>Meta Pixel</strong>, operated by Meta Platforms, which measures whether
+                Tallo&apos;s advertising on Meta services (such as Facebook and Instagram) leads to website
+                visits and app-store clicks. Meta may associate these events with your Meta account under
+                its own privacy policy. You can review and control this at{" "}
+                <a href="https://www.facebook.com/adpreferences" rel="noopener noreferrer">
+                  facebook.com/adpreferences
+                </a>{" "}
+                and{" "}
+                <a href="https://www.facebook.com/privacy/policy" rel="noopener noreferrer">
+                  facebook.com/privacy/policy
+                </a>
+                .
+              </li>
+            </ul>
+            <p>
+              These tools run on the website only. They are never included in the App, and Tallo does not
+              send any data collected in the App to either service. Website measurement is used for
+              aggregate traffic reporting and advertising attribution, not for building behavioural
+              profiles of individuals, and Tallo does not sell personal information to anyone.
             </p>
           </Section>
 

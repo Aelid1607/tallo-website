@@ -2,9 +2,10 @@
 
 import { useEffect } from "react";
 
-// Fires a GA4 event whenever an App Store or Google Play badge is clicked.
-// The badges carry data-download-store ("app-store" | "google-play") and an
-// optional data-download-campaign, set in MarketingChrome's StoreBadges.
+// Fires a GA4 event and a Meta Pixel event whenever an App Store or Google
+// Play badge is clicked. The badges carry data-download-store
+// ("app-store" | "google-play") and an optional data-download-campaign, set
+// in MarketingChrome's StoreBadges.
 export function DownloadEvents() {
   useEffect(() => {
     function onClick(event: MouseEvent) {
@@ -22,6 +23,14 @@ export function DownloadEvents() {
         .gtag;
       if (typeof gtag === "function") {
         gtag("event", eventName, { store, campaign });
+      }
+
+      const fbq = (window as unknown as { fbq?: (...args: unknown[]) => void })
+        .fbq;
+      if (typeof fbq === "function") {
+        // Standard Lead event so Ads Manager can optimise on it directly,
+        // with the store carried as a parameter.
+        fbq("track", "Lead", { content_name: eventName, store, campaign });
       }
     }
 
