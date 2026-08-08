@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 export const SITE_NAME = "Tallo";
-export const SITE_URL = "https://talloapp.com.au";
+export const SITE_URL = "https://www.talloapp.com.au";
 export const HOME_TITLE =
   "Tallo | Compare Grocery Prices at Coles, Woolworths & Aldi";
 export const HOME_DESCRIPTION =
